@@ -1,4 +1,4 @@
-# kAdam is a an app made by hajar Bint Seyd on the issues given by hack a week cordinators 
+# kAdam is a an app made by hajar Bint Seyd on responsible consumption and production a problem given by hack a week cordinators 
 Responsible consumption and production
 Sustainable consumption and production is about doing more and better with less. It is also about decoupling economic growth from environmental degradation, increasing resource efficiency and promoting sustainable lifestyles
 The transition to sustainable consumption and production of goods and services is necessary to reduce the negative impact on the climate and the environment, and on people's life.
