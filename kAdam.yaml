@@ -1,0 +1,1339 @@
+modules:
+- {name: Package1, code: "import anvil.server\nimport anvil.google.auth, anvil.google.drive\n\
+    from anvil.google.drive import app_files\nimport anvil.users\nimport anvil.tables\
+    \ as tables\nimport anvil.tables.query as q\nfrom anvil.tables import app_tables\n\
+    # This is a package.\n# You can define variables and functions here, and use them\
+    \ from any form. For example, in a top-level form:\n#\n#    from . import Package1\n\
+    #\n#    Package1.say_hello()\n#\n\ndef say_hello():\n  print(\"Hello, world\"\
+    )\n", is_package: true, id: 5R3U4KZ6RRHOUO2KKCV2UA5L3TRJBTFP}
+- {name: Module1, code: "import anvil.server\nimport anvil.google.auth, anvil.google.drive\n\
+    from anvil.google.drive import app_files\nimport anvil.users\nimport anvil.tables\
+    \ as tables\nimport anvil.tables.query as q\nfrom anvil.tables import app_tables\n\
+    # This is a module.\n# You can define variables and functions here, and use them\
+    \ from any form. For example, in a top-level form:\n#\n#    from . import Module1\n\
+    #\n#    Module1.say_hello()\n#\n\ndef say_hello():\n  print(\"Hello, world\")\n",
+  id: YJR5NHKPR636SZIGPGK36XCQLAPJMDRT}
+- {name: Package2, code: "import anvil.server\nimport anvil.google.auth, anvil.google.drive\n\
+    from anvil.google.drive import app_files\nimport anvil.users\nimport anvil.tables\
+    \ as tables\nimport anvil.tables.query as q\nfrom anvil.tables import app_tables\n\
+    # This is a package.\n# You can define variables and functions here, and use them\
+    \ from any form. For example, in a top-level form:\n#\n#    from . import Package2\n\
+    #\n#    Package2.say_hello()\n#\n\ndef say_hello():\n  print(\"Hello, world\"\
+    )\n", is_package: true, id: 72ADMNJYARNZ5KCSJ34EJEXZM5F2HID6}
+exported_table_schema:
+- python_name: users
+  client: none
+  server: full
+  name: Users
+  columns:
+    1alnsdDy_cE=:
+      name: email
+      type: string
+      admin_ui: {order: 0, width: 200}
+    7cUXmgMR1aY=:
+      name: remembered_logins
+      type: simpleObject
+      admin_ui: {order: 4, width: 200}
+    MXjGu9Zg_eo=:
+      name: last_login
+      type: datetime
+      admin_ui: {order: 3, width: 200}
+    _1pW67psPCI=:
+      name: Column5
+      type: simpleObject
+      admin_ui: {order: 5, width: 200}
+    d3gtFr3cQ0I=:
+      name: enabled
+      type: bool
+      admin_ui: {order: 1, width: 100}
+    qpyFzZtQ1wI=:
+      name: signed_up
+      type: datetime
+      admin_ui: {order: 2, width: 200}
+  id: 329224
+- python_name: courses
+  client: none
+  server: search
+  name: courses
+  columns:
+    ANtdyuZiEK4=:
+      name: description
+      type: string
+      admin_ui: {order: 4, width: 200}
+    Znk5LeQG_8I=:
+      name: name
+      type: string
+      admin_ui: {order: 0, width: 200}
+    fGWVZ2jbsOg=:
+      name: price
+      type: string
+      admin_ui: {order: 1, width: 200}
+    n4GDnzKzUus=:
+      name: image
+      type: media
+      admin_ui: {order: 3, width: 200}
+    zJevCzvgYFU=:
+      name: date and time
+      type: datetime
+      admin_ui: {order: 2, width: 200}
+  id: 329251
+- python_name: clothingstable
+  client: none
+  server: full
+  name: clothingstable
+  columns:
+    7kff4OLZn8Q=:
+      name: date and time
+      type: datetime
+      admin_ui: {order: 2, width: 200}
+    Rka0IerAuzY=:
+      name: price
+      type: string
+      admin_ui: {order: 1, width: 200}
+    Rr0HSaWZtj0=:
+      name: name
+      type: string
+      admin_ui: {order: 0, width: 200}
+    bl4xog7mXTo=:
+      name: description
+      type: string
+      admin_ui: {order: 4, width: 200}
+    xxS29_Kkqeg=:
+      name: image
+      type: media
+      admin_ui: {order: 3, width: 200}
+  id: 330501
+- python_name: householdtable
+  client: none
+  server: search
+  name: householdtable
+  columns:
+    KGqSv2irH_g=:
+      name: name
+      type: string
+      admin_ui: {order: 0, width: 200}
+    NtuwhRJrRlw=:
+      name: date and time
+      type: datetime
+      admin_ui: {order: 3, width: 200}
+    _FWa+BNVvqQ=:
+      name: image
+      type: media
+      admin_ui: {order: 2, width: 200}
+    kN22MtnMeps=:
+      name: price
+      type: string
+      admin_ui: {order: 1, width: 200}
+    mJ873ZxgylM=:
+      name: description
+      type: string
+      admin_ui: {order: 4, width: 200}
+  id: 330528
+- python_name: studytable
+  client: none
+  server: full
+  name: studytable
+  columns:
+    0TXJ65huO84=:
+      name: date and time
+      type: datetime
+      admin_ui: {order: 4, width: 200}
+    U+Uh1Bh6CqY=:
+      name: description
+      type: string
+      admin_ui: {order: 3, width: 200}
+    WK3Ex4+SyNg=:
+      name: price
+      type: string
+      admin_ui: {order: 1, width: 200}
+    iysmebuR1II=:
+      name: name
+      type: string
+      admin_ui: {order: 0, width: 200}
+    mfZglkSo1aM=:
+      name: image
+      type: media
+      admin_ui: {order: 2, width: 200}
+  id: 330529
+- python_name: kitchentable
+  client: none
+  server: search
+  name: kitchentable
+  columns:
+    1e8rjmQQWFU=:
+      name: description
+      type: string
+      admin_ui: {order: 3, width: 200}
+    As7D+dDAMRU=:
+      name: name
+      type: string
+      admin_ui: {order: 0, width: 200}
+    SDqokY6vq60=:
+      name: date and time
+      type: datetime
+      admin_ui: {order: 4, width: 200}
+    St6RePY90WY=:
+      name: image
+      type: media
+      admin_ui: {order: 2, width: 200}
+    Yq6AQmTBseI=:
+      name: price
+      type: string
+      admin_ui: {order: 1, width: 200}
+  id: 330530
+- python_name: accessoriestable
+  client: none
+  server: full
+  name: accessoriestable
+  columns:
+    +fML2Yb8xhk=:
+      name: image
+      type: media
+      admin_ui: {order: 2, width: 200}
+    09UMWoU9A0c=:
+      name: price
+      type: string
+      admin_ui: {order: 1, width: 200}
+    76Mg_Cx0ZB4=:
+      name: date and time
+      type: datetime
+      admin_ui: {order: 4, width: 200}
+    LOTmbhC5y_4=:
+      name: name
+      type: string
+      admin_ui: {order: 0, width: 200}
+    tMbOrisfJVY=:
+      name: description
+      type: string
+      admin_ui: {order: 3, width: 200}
+  id: 330531
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/anvil/users.yml
+  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
+    confirm_email: false, use_google: true, require_secure_passwords: true, allow_remember_me: true,
+    remember_me_days: 365}
+  server_config: {user_table: users}
+- source: /runtime/services/google.yml
+  client_config: {}
+  server_config: {}
+forms:
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: ColumnPanel
+    properties: {}
+    name: content_panel
+    layout_properties: {grid_position: 'OHYZID,PBCJMD'}
+  is_package: true
+  code: "from ._anvil_designer import electronic_devicesTemplate\nfrom anvil import\
+    \ *\nimport anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\nfrom ..CourseItem\
+    \ import CourseItem\nfrom ..Checkout import Checkout\n\n\n\n\n\nclass electronic_devices(electronic_devicesTemplate):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n    self.load_courses()\n    \n  def\
+    \ back(self):\n    self.content_panel.clear()\n    self.load_courses()\n    \n\
+    \  def render_checkout(self, course_name):\n    self.content_panel.clear()\n \
+    \   self.content_panel.add_component(Checkout(course_name, self.back))\n\n  def\
+    \ load_courses(self):\n    courses = anvil.server.call(\"get_all_courses\").search()\n\
+    \    course_panel = GridPanel()\n    \n    for i, course in enumerate(courses):\n\
+    \      c = CourseItem(name=course[\"name\"], button_text= course[\"price\"], description=course[\"\
+    description\"], image=course[\"image\"], button_callback=self.render_checkout)\n\
+    \      course_panel.add_component(c, row=str(i//2), width_xs=6)\n    self.content_panel.add_component(course_panel)\n\
+    \n    \n  \n \n   \n  \n      \n      "
+  class_name: electronic_devices
+  id: Y4YKLQHDTL4UYZD6OCI5I4IBCAJKHDBU
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: ColumnPanel
+    properties: {}
+    name: content_panel
+    layout_properties: {grid_position: 'ICDJTI,IAJGRV'}
+  is_package: true
+  code: "from ._anvil_designer import household_itemsTemplate\nfrom anvil import *\n\
+    import anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\nfrom ..CourseItem\
+    \ import CourseItem\nfrom ..Checkout import Checkout\n\nclass household_items(household_itemsTemplate):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n    self.load_householdtable()\n    \n\
+    \  def back(self):\n    self.content_panel.clear()\n    self.load_householdtable\
+    \ ()\n    \n  def render_checkout(self, course_name):\n    self.content_panel.clear()\n\
+    \    self.content_panel.add_component(Checkout(course_name, self.back))\n\n  def\
+    \ load_householdtable(self):\n    householdtable = anvil.server.call('get_householdtable_details').search()\n\
+    \    course_panel = GridPanel()\n    \n    for i, course in enumerate(householdtable):\n\
+    \      c = CourseItem(name=course[\"name\"], button_text= course[\"price\"], description=course[\"\
+    description\"], image=course[\"image\"], button_callback=self.render_checkout)\n\
+    \      course_panel.add_component(c, row=str(i//2), width_xs=6)\n    self.content_panel.add_component(course_panel)"
+  class_name: household_items
+  id: EDSTUXABSZELKGST246NRAQUHMER6S6Z
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: ColumnPanel
+    properties: {}
+    name: content_panel
+    layout_properties: {grid_position: 'GHVDHE,KNMDXF'}
+  is_package: true
+  code: "from ._anvil_designer import study_materialsTemplate\nfrom anvil import *\n\
+    import anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\nfrom ..CourseItem\
+    \ import CourseItem\nfrom ..Checkout import Checkout\n\nclass study_materials(study_materialsTemplate):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n    self.load_studytable()\n    \n  def\
+    \ back(self):\n    self.content_panel.clear()\n    self.load_studytable ()\n \
+    \   \n  def render_checkout(self, course_name):\n    self.content_panel.clear()\n\
+    \    self.content_panel.add_component(Checkout(course_name, self.back))\n\n  def\
+    \ load_studytable(self):\n    studytable = anvil.server.call('get_studytable_details').search()\n\
+    \    course_panel = GridPanel()\n    \n    for i, course in enumerate(studytable):\n\
+    \      c = CourseItem(name=course[\"name\"], button_text= course[\"price\"], description=course[\"\
+    description\"], image=course[\"image\"], button_callback=self.render_checkout)\n\
+    \      course_panel.add_component(c, row=str(i//2), width_xs=6)\n    self.content_panel.add_component(course_panel)\n\
+    \n  "
+  class_name: study_materials
+  id: RDKTCE2TK5YGSWVFRYFJEGSEA3SK4X4N
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: large, col_widths: '{}',
+      spacing_below: large, background: ''}
+    name: content_panel
+    layout_properties: {grid_position: 'VRBXMC,FJBENZ'}
+    components:
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: 60, content: 'you have submitted  your  response ',
+        font: italic, spacing_above: large, spacing_below: small, data: null, background: '',
+        format: markdown}
+      name: rich_text_1
+      layout_properties: {grid_position: 'UZQXAH,HZGGUN'}
+      components: []
+  is_package: true
+  code: "from ._anvil_designer import lendingsection_4Template\nfrom anvil import\
+    \ *\nimport anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\n\n\nclass lendingsection_4(lendingsection_4Template):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n\n    # Any code you write here will\
+    \ run when the form opens.\n\n\n\n"
+  class_name: lendingsection_4
+  id: NEP43MVKITFFRHF64EABVTN3OPPKSM2T
+- container: {type: ColumnPanel}
+  components: []
+  is_package: true
+  code: "from ._anvil_designer import CheckoutTemplate\nfrom anvil import *\nimport\
+    \ anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\n\n\n\nclass Checkout(CheckoutTemplate):\n\
+    \  def __init__(self, id_name, back_button_callback, **properties):\n    # Set\
+    \ Form properties and Data Bindings.\n    self.init_components(**properties)\n\
+    \    self.back_button_callback = back_button_callback\n    self.update_form(id_name)\n\
+    \  \n  def update_form(self, id_name):\n    course = anvil.server.call('get_course_details',\
+    \ id_name)\n    self.course = course\n    self.name_label.text = course[\"name\"\
+    ]\n    self.description_label.text = course['description']\n    self.price_label.text\
+    \ = f\"${course['price']} USD\"\n    self.image_content.source = course['image']\n\
+    \n  def buy_click(self, **event_args):\n    \"\"\"This method is called when the\
+    \ button is clicked\"\"\"\n    if anvil.users.get_user() == None:\n      anvil.users.login_with_form()\n\
+    \    \n    user = anvil.users.get_user()\n    if user == None:\n      alert(\"\
+    Please sign in!\")\n      return\n    \n    if user[\"purchased_courses\"] and\
+    \ self.course[\"id_name\"] in user[\"purchased_courses\"]:\n      alert(\"You\
+    \ already own this course!\")\n      return\n  \n    token, info = stripe.checkout.get_token(amount=self.course[\"\
+    price\"]*100, currency=\"USD\", title=self.course[\"name\"], description=self.course[\"\
+    description\"])\n    try:\n      anvil.server.call(\"charge_user\", token, user[\"\
+    email\"], self.course[\"id_name\"])\n      alert(\"Success\")\n    except Exception\
+    \ as e:\n      alert(str(e))\n    \n  \n  def back_button_click(self, **event_args):\n\
+    \    \"\"\"This method is called when the button is clicked\"\"\"\n    self.back_button_callback()\n\
+    \n\n"
+  class_name: Checkout
+  id: ZYWHF35QUDKIZ4MAGTVY5X4JSFYOPNET
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: content_panel
+    layout_properties: {grid_position: 'VWMCCN,MPCOSX'}
+    components:
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: 20, content: 'how you want to lend
+          your thing?', font: italic, spacing_above: small, spacing_below: small,
+        data: null, background: '', format: markdown}
+      name: rich_text_1
+      layout_properties: {grid_position: 'UGXWCB,SBZFVM'}
+      components:
+      - type: RadioButton
+        properties: {role: null, selected: false, align: center, tooltip: '', border: '',
+          enabled: true, foreground: '', value: '', visible: true, text: give for free,
+          font_size: 18, font: '', spacing_above: small, spacing_below: small, italic: true,
+          background: '', bold: true, group_name: radioGroup1, underline: false}
+        name: radio_button_1
+        layout_properties: {}
+      - type: RadioButton
+        properties: {role: null, selected: false, align: center, tooltip: '', border: '',
+          enabled: true, foreground: '', value: '', visible: true, text: 'sell for
+            a price  we give ', font_size: 18, font: '', spacing_above: small, spacing_below: small,
+          italic: true, background: '', bold: true, group_name: radioGroup1, underline: false}
+        name: radio_button_2
+        layout_properties: {}
+      - type: RadioButton
+        properties: {role: null, selected: false, align: center, tooltip: '', border: '',
+          enabled: true, foreground: '', value: '', visible: true, text: 'give to
+            borrow for:', font_size: 18, font: '', spacing_above: small, spacing_below: small,
+          italic: true, background: '', bold: true, group_name: radioGroup1, underline: false}
+        name: radio_button_3
+        layout_properties: {}
+      - type: TextBox
+        properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: '',
+          border: '', enabled: true, foreground: '', visible: true, text: 'enter a
+            time period:', font_size: null, font: '', spacing_above: small, type: text,
+          spacing_below: small, italic: true, background: '', bold: false, underline: false}
+        name: text_box_1
+        layout_properties: {width: -538.8}
+      - type: Button
+        properties: {role: primary-color, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: next, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: button_1
+        layout_properties: {}
+        event_bindings: {click: button_1_click}
+  is_package: true
+  code: "from ._anvil_designer import lendingsection_page2Template\nfrom anvil import\
+    \ *\nimport anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\nfrom ..lendingsection_page3\
+    \ import lendingsection_page3\n\nclass lendingsection_page2(lendingsection_page2Template):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n\n    # Any code you write here will\
+    \ run when the form opens.\n\n  def button_1_click(self, **event_args):\n    \"\
+    \"\"This method is called when the button is clicked\"\"\"\n    self.content_panel.clear()\n\
+    \    self.content_panel.add_component(lendingsection_page3())\n\n\n"
+  class_name: lendingsection_page2
+  id: XFNQWTAUSCS3E7EUKX6MYTD5RU73S65O
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: XYPanel
+    properties: {height: 610.1999969482422}
+    name: content_panel
+    layout_properties: {grid_position: 'FQWHBT,FRCECL'}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'enter the time period  you have  use this product :',
+        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: true, background: '', bold: true, underline: false, icon: ''}
+      name: label_2
+      layout_properties: {x: 10, y: 111, width: 238}
+    - type: TextBox
+      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: timeperiod,
+        font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+        italic: true, background: '', bold: false, underline: false}
+      name: text_box_1
+      layout_properties: {x: 268.75, y: 111, width: 160}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'enter the url of google location of place  we have to
+          pickup ', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: true, background: '', bold: false, underline: false,
+        icon: ''}
+      name: label_3
+      layout_properties: {x: 10, y: 200, width: 248.75}
+    - type: TextBox
+      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: url, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      name: text_box_2
+      layout_properties: {x: 280.75, y: 199, width: 160}
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: submit, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: button_1
+      layout_properties: {x: 580.75, y: 432, width: 100}
+      event_bindings: {click: button_1_click}
+    - type: RadioButton
+      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+        enabled: true, foreground: '', value: '', visible: true, text: 'no', font_size: null,
+        font: '', spacing_above: small, spacing_below: small, italic: true, background: '',
+        bold: true, group_name: radioGroup1, underline: false}
+      name: radio_button_1
+      layout_properties: {x: 354.75, y: 10, width: 100}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'do your  product have any damage ?', font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: true,
+        background: '', bold: true, underline: false, icon: ''}
+      name: label_1
+      layout_properties: {x: 78, y: 10, width: 231}
+    - type: RadioButton
+      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+        enabled: true, foreground: '', value: '', visible: true, text: 'yes', font_size: null,
+        font: '', spacing_above: small, spacing_below: small, italic: true, background: '',
+        bold: true, group_name: radioGroup1, underline: false}
+      name: radio_button_2
+      layout_properties: {x: 563.75, y: 10, width: 100}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: your product will be examined at the pickup .we will examine if there is any damage.we will  put a reasonable price after examine it.,
+        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: true, background: '', bold: true, underline: false, icon: 'fa:bullhorn'}
+      name: label_4
+      layout_properties: {x: 22.75, y: 327, width: 695}
+  is_package: true
+  code: "from ._anvil_designer import lendingsection_page3Template\nfrom anvil import\
+    \ *\nimport anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\nfrom ..lendingsection_4\
+    \ import lendingsection_4\n\nclass lendingsection_page3(lendingsection_page3Template):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n\n    # Any code you write here will\
+    \ run when the form opens.\n\n  def button_1_click(self, **event_args):\n    \"\
+    \"\"This method is called when the button is clicked\"\"\"\n    self.content_panel.clear()\n\
+    \    self.content_panel.add_component(lendingsection_4())\n\n\n"
+  class_name: lendingsection_page3
+  id: 6CIOILLWBA4TWQ5EJZS5MG6J3NFT4GI5
+- is_package: true
+  container:
+    type: HtmlTemplate
+    properties: {html: '@theme:standard-page.html'}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: content_panel
+    layout_properties: {slot: default}
+    components:
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: columnpanel1
+      layout_properties: {grid_position: 'AAZYNW,NUMQQO'}
+      components: []
+  - type: FlowPanel
+    properties: {}
+    name: navbar_links
+    layout_properties: {slot: nav-right}
+    components:
+    - type: Link
+      properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: search items, font_size: null, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: 'fa:search'}
+      name: topdeals
+      layout_properties: {}
+      event_bindings: {click: topdeals_click}
+    - type: Link
+      properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Sign in, font_size: null, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: 'fa:sign-in'}
+      name: signin
+      layout_properties: {}
+      event_bindings: {click: signin_click}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: kAdam, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'data:image/jpeg;base64,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'}
+    name: link_1
+    layout_properties: {slot: title}
+    event_bindings: {click: link_1_click}
+  code: "from ._anvil_designer import baseTemplate\nfrom anvil import *\nimport anvil.server\n\
+    import anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive import app_files\n\
+    import anvil.users\nimport anvil.tables as tables\nimport anvil.tables.query as\
+    \ q\nfrom anvil.tables import app_tables\nfrom ..home import home\nimport anvil.users\n\
+    import anvil.server\nimport webbrowser\nfrom ..items import items\nfrom ..household_items\
+    \ import household_items\nfrom ..kitchen_items import kitchen_items\nfrom ..accessories\
+    \ import accessories\nfrom ..clothings import clothings\nfrom ..electronic_devices\
+    \ import electronic_devices\nfrom ..study_materials import study_materials\n\n\
+    \nclass base(baseTemplate):\n  def __init__(self, **properties):\n    # Set Form\
+    \ properties and Data Bindings.\n    self.init_components(**properties)\n    self.change_signin_text()\n\
+    \    self.content_panel.add_component(home())\n\n  def change_signin_text(self):\n\
+    \    user=anvil.users.get_user()\n    if user:\n      email=user[\"email\"]\n\
+    \      self.signin.text=email\n      \n    else:\n      self.signin.text=\"Sign\
+    \ in\"\n\n  def link_1_click(self, **event_args):\n    \"\"\"This method is called\
+    \ when the link is clicked\"\"\"\n    self.content_panel.clear()\n    self.content_panel.add_component(home())\n\
+    \    \n  def go_to_home(self):\n     self.content_panel.clear()\n     self.content_panel.addd_component(home())\n\
+    \n  def signin_click(self, **event_args):\n    \"\"\"This method is called when\
+    \ the link is clicked\"\"\"\n    user=anvil.users.get_user()\n    if user:\n \
+    \     logout=confirm(\"would you like to logout?\")\n      if logout:\n      \
+    \  anvil.users.logout()\n        self.content_panel.clear()\n        self.content_panel.add_component(home())\n\
+    \    else:\n      anvil.users.login_with_form()\n    self.change_signin_text()\n\
+    \n  def topdeals_click(self, **event_args):\n    \"\"\"This method is called when\
+    \ the link is clicked\"\"\"\n    user_input=input('search(household items/study\
+    \ materials/clothings/electronic devices/kitchen items/accessories)')\n    if\
+    \ user_input.lower()=='household items':\n      self.content_panel.clear()\n \
+    \     self.content_panel.add_component(household_items())\n    elif user_input.lower()=='study\
+    \ materials':\n      self.content_panel.clear()\n      self.content_panel.add_component(study_materials())\n\
+    \    elif user_input.lower()=='clothings':\n      self.content_panel.clear()\n\
+    \      self.content_panel.add_component(clothings())\n    elif user_input.lower()=='electronic\
+    \ devices':\n      self.content_panel.clear()\n      self.content_panel.add_component(electronic_devices())\n\
+    \    elif user_input.lower()=='kitchen items':\n      self.content_panel.clear()\n\
+    \      self.content_panel.add_component(kitchen_items())\n    elif user_input.lower()=='accessories':\n\
+    \      self.content_panel.clear()\n      self.content_panel.add_component(accessories())\n\
+    \    else:\n      print('answer with available options')\n      \n    \n\n\n\n\
+    \n\n"
+  class_name: base
+  id: W4JRHPH3VPKWAUKXUWZW542XFGI6LY4Y
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: content_panel
+    layout_properties: {grid_position: 'THNUWB,PMCBNL'}
+    components:
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: HOUSEHOLD  ITEMS, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: householditems
+      layout_properties: {grid_position: 'IAVEAF,VKBIAC'}
+      event_bindings: {click: householditems_click}
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: study materials, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: studymaterials
+      layout_properties: {grid_position: 'EPKVQZ,GDQBBH'}
+      event_bindings: {click: studymaterials_click}
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: clothings, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: clothings
+      layout_properties: {grid_position: 'DUMYLV,MBHPZP'}
+      event_bindings: {click: clothings_click}
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: electronic devices, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: electronicdevices
+      layout_properties: {grid_position: 'HYJAHR,EUCXOD'}
+      event_bindings: {click: electronicdevices_click}
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: kitchen items, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: kitchenitems
+      layout_properties: {grid_position: 'ZIUNUY,AMYQRB'}
+      event_bindings: {click: kitchenitems_click}
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: accessories, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: acces
+      layout_properties: {grid_position: 'IBIYVE,CPFILX'}
+      event_bindings: {click: acces_click}
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: 'LENDING SECTION ', font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: 'fa:gift'}
+      name: lendingsection
+      layout_properties: {grid_position: 'JOPALM,AZNWSI'}
+      event_bindings: {click: lendingsection_click}
+  is_package: true
+  custom_component: false
+  code: "from ._anvil_designer import itemsTemplate\nfrom anvil import *\nimport anvil.server\n\
+    import anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive import app_files\n\
+    import anvil.users\nimport anvil.tables as tables\nimport anvil.tables.query as\
+    \ q\nfrom anvil.tables import app_tables\nfrom ..household_items import household_items\n\
+    from ..study_materials import study_materials\nfrom ..clothings import clothings\n\
+    from ..electronic_devices import electronic_devices\nfrom ..kitchen_items import\
+    \ kitchen_items\nfrom ..accessories import accessories\nfrom ..lendingsection_page1\
+    \ import lendingsection_page1\n\nclass items(itemsTemplate):\n  def __init__(self,\
+    \ **properties):\n    # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\
+    \n    # Any code you write here will run when the form opens.\n\n  def householditems_click(self,\
+    \ **event_args):\n    \"\"\"This method is called when the button is clicked\"\
+    \"\"\n    self.content_panel.clear()\n    self.content_panel.add_component(household_items())\n\
+    \n  def studymaterials_click(self, **event_args):\n    \"\"\"This method is called\
+    \ when the button is clicked\"\"\"\n    self.content_panel.clear()\n    self.content_panel.add_component(study_materials())\n\
+    \n  def clothings_click(self, **event_args):\n    \"\"\"This method is called\
+    \ when the button is clicked\"\"\"\n    self.content_panel.clear()\n    self.content_panel.add_component(clothings())\n\
+    \n  def electronicdevices_click(self, **event_args):\n    \"\"\"This method is\
+    \ called when the button is clicked\"\"\"\n    self.content_panel.clear()\n  \
+    \  self.content_panel.add_component(electronic_devices())\n\n  def kitchenitems_click(self,\
+    \ **event_args):\n    \"\"\"This method is called when the button is clicked\"\
+    \"\"\n    self.content_panel.clear()\n    self.content_panel.add_component(kitchen_items())\n\
+    \n  def acces_click(self, **event_args):\n    \"\"\"This method is called when\
+    \ the button is clicked\"\"\"\n    self.content_panel.clear()\n    self.content_panel.add_component(accessories())\n\
+    \n  def lendingsection_click(self, **event_args):\n    \"\"\"This method is called\
+    \ when the button is clicked\"\"\"\n    self.content_panel.clear()\n    self.content_panel.add_component(lendingsection_page1())\n\
+    \n\n\n\n\n\n\n\n\n\n\n\n"
+  class_name: items
+  id: TYTXR5HH3LLA5KR222CKY6GDFFI24SXB
+- container:
+    type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+  components:
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: columnpanel
+    layout_properties: {grid_position: 'VCSIMF,AZQSKI'}
+    components:
+    - type: Image
+      properties: {role: null, vertical_align: center, height: 223, tooltip: '', border: '',
+        foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: 'data:image/jpeg;base64,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',
+        spacing_below: small, background: '', horizontal_align: center}
+      name: mainimage
+      layout_properties: {grid_position: 'NGCBWD,ZEXFUT'}
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: 20, content: 'you can borrow items,purchase
+          for price,buy for free,giveaway items,exchange things through  this  app.enjoy
+          !', font: italic, spacing_above: small, spacing_below: small, data: null,
+        background: '', format: markdown}
+      name: label
+      layout_properties: {grid_position: 'IEIWPE,WDPXYF'}
+      components:
+      - type: Button
+        properties: {role: primary-color, align: center, tooltip: '', border: '',
+          enabled: true, foreground: '', visible: true, text: view OPTIONS, font_size: 22,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: true, background: '', bold: true, underline: false, icon: 'fa:arrow-right'}
+        name: button_1
+        layout_properties: {grid_position: 'ZZBUVH,TMGITI'}
+        event_bindings: {click: button_1_click}
+  is_package: true
+  code: "from ._anvil_designer import homeTemplate\nfrom anvil import *\nimport anvil.server\n\
+    import anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive import app_files\n\
+    import anvil.users\nimport anvil.tables as tables\nimport anvil.tables.query as\
+    \ q\nfrom anvil.tables import app_tables\nfrom ..items import items\n\nclass home(homeTemplate):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n\n    # Any code you write here will\
+    \ run when the form opens.\n\n  def button_1_click(self, **event_args):\n    \"\
+    \"\"This method is called when the button is clicked\"\"\"\n    self.columnpanel.clear()\n\
+    \    self.columnpanel.add_component(items())\n\n"
+  class_name: home
+  id: CLO37GLCU7KFSE7AAFJMRNI3L3CDOUF6
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: ColumnPanel
+    properties: {}
+    name: content_panel
+    layout_properties: {grid_position: 'TCMHHL,UBWDXF'}
+  is_package: true
+  code: "from ._anvil_designer import clothingsTemplate\nfrom anvil import *\nimport\
+    \ anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\nfrom ..CourseItem\
+    \ import CourseItem\nfrom ..Checkout import Checkout\n\n\nclass clothings(clothingsTemplate):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n    self.load_clothingstable()\n    \n\
+    \  def back(self):\n    self.content_panel.clear()\n    self.load_clothingstable\
+    \ ()\n    \n  def render_checkout(self, course_name):\n    self.content_panel.clear()\n\
+    \    self.content_panel.add_component(Checkout(course_name, self.back))\n\n  def\
+    \ load_clothingstable(self):\n    clothingstable = anvil.server.call(\"get_clothingstable_details\"\
+    ).search()\n    course_panel = GridPanel()\n    \n    for i, course in enumerate(clothingstable):\n\
+    \      c = CourseItem(name=course[\"name\"], button_text= course[\"price\"], description=course[\"\
+    description\"], image=course[\"image\"], button_callback=self.render_checkout)\n\
+    \      course_panel.add_component(c, row=str(i//2), width_xs=6)\n    self.content_panel.add_component(course_panel)\n"
+  class_name: clothings
+  id: REHQTS7PD6D3URF2HTTHVJKTJVQIG4JH
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: large, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: content_panel
+    layout_properties: {grid_position: 'LFROAJ,VZNZLJ', full_width_row: true}
+    components:
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: 20, content: 'In which category
+          the lending  thing belong :', font: italic, spacing_above: small, spacing_below: small,
+        data: null, background: '', format: markdown}
+      name: rich_text_1
+      layout_properties: {grid_position: 'KBLASN,PSPSVN'}
+      components:
+      - type: RadioButton
+        properties: {role: null, selected: false, align: center, tooltip: '', border: '',
+          enabled: true, foreground: '', value: '', visible: true, text: household item,
+          font_size: 18, font: '', spacing_above: small, spacing_below: small, italic: true,
+          background: '', bold: true, group_name: radioGroup1, underline: false}
+        name: radio_button_1
+        layout_properties: {grid_position: 'HVXHDV,ONWVQP'}
+      - type: RadioButton
+        properties: {role: null, selected: false, align: center, tooltip: '', border: '',
+          enabled: true, foreground: '', value: '', visible: true, text: electronic devices,
+          font_size: 18, font: '', spacing_above: small, spacing_below: small, italic: true,
+          background: '', bold: true, group_name: radioGroup1, underline: false}
+        name: radio_button_2
+        layout_properties: {grid_position: 'HUQSIJ,BZARNL'}
+      - type: RadioButton
+        properties: {role: null, selected: false, align: center, tooltip: '', border: '',
+          enabled: true, foreground: '', value: '', visible: true, text: 'study materials ',
+          font_size: 18, font: '', spacing_above: small, spacing_below: small, italic: true,
+          background: '', bold: true, group_name: radioGroup1, underline: false}
+        name: radio_button_3
+        layout_properties: {grid_position: 'VZYXKQ,CZVNCV'}
+      - type: RadioButton
+        properties: {role: null, selected: false, align: center, tooltip: '', border: '',
+          enabled: true, foreground: '', value: '', visible: true, text: kitchen items,
+          font_size: 18, font: '', spacing_above: small, spacing_below: small, italic: true,
+          background: '', bold: true, group_name: radioGroup1, underline: false}
+        name: radio_button_4
+        layout_properties: {grid_position: 'DDXPNJ,MWTDIH'}
+      - type: RadioButton
+        properties: {role: null, selected: false, align: center, tooltip: '', border: '',
+          enabled: true, foreground: '', value: '', visible: true, text: clothings,
+          font_size: 18, font: '', spacing_above: small, spacing_below: small, italic: true,
+          background: '', bold: true, group_name: radioGroup1, underline: false}
+        name: radio_button_5
+        layout_properties: {grid_position: 'SVNIAK,KIMXAI'}
+      - type: RadioButton
+        properties: {role: null, selected: false, align: center, tooltip: '', border: '',
+          enabled: true, foreground: '', value: '', visible: true, text: accessories,
+          font_size: 18, font: '', spacing_above: small, spacing_below: small, italic: true,
+          background: '', bold: true, group_name: radioGroup1, underline: false}
+        name: radio_button_6
+        layout_properties: {grid_position: 'GKHOKW,OIYNOJ'}
+      - type: Button
+        properties: {role: primary-color, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: next, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: button_1
+        layout_properties: {grid_position: 'JWLOPD,BCSNFE'}
+        event_bindings: {click: button_1_click}
+  is_package: true
+  code: "from ._anvil_designer import lendingsection_page1Template\nfrom anvil import\
+    \ *\nimport anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\nfrom ..lendingsection_page2\
+    \ import lendingsection_page2\n\nclass lendingsection_page1(lendingsection_page1Template):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n\n    # Any code you write here will\
+    \ run when the form opens.\n\n  def button_1_click(self, **event_args):\n    \"\
+    \"\"This method is called when the button is clicked\"\"\"\n    self.content_panel.clear()\n\
+    \    self.content_panel.add_component(lendingsection_page2())\n\n\n"
+  class_name: lendingsection_page1
+  id: VRSDEB6WFWZ7742RMN6CECOVVOVBWGEE
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: ColumnPanel
+    properties: {}
+    name: content_panel
+    layout_properties: {grid_position: 'IMXMVO,BJPCPG'}
+  is_package: true
+  code: "from ._anvil_designer import accessoriesTemplate\nfrom anvil import *\nimport\
+    \ anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\nfrom ..CourseItem\
+    \ import CourseItem\nfrom ..Checkout import Checkout\n\nclass accessories(accessoriesTemplate):\n\
+    \  \n  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n    self.load_accessoriestable()\n  \
+    \  \n  def back(self):\n    self.content_panel.clear()\n    self.load_accessoriestable\
+    \ ()\n    \n  def render_checkout(self, course_name):\n    self.content_panel.clear()\n\
+    \    self.content_panel.add_component(Checkout(course_name, self.back))\n\n  def\
+    \ load_accessoriestable(self):\n    accessoriestable = anvil.server.call('get_accessoriestable_details').search()\n\
+    \    course_panel = GridPanel()\n    \n    for i, course in enumerate(accessoriestable):\n\
+    \      c = CourseItem(name=course[\"name\"], button_text= course[\"price\"], description=course[\"\
+    description\"], image=course[\"image\"], button_callback=self.render_checkout)\n\
+    \      course_panel.add_component(c, row=str(i//2), width_xs=6)\n    self.content_panel.add_component(course_panel)\n\
+    \n\n    # Any code you write here will run when the form opens."
+  class_name: accessories
+  id: BMDBESXQJRREL25ANXCILGPACEVUFAUN
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: XYPanel
+    properties: {height: 463}
+    name: content_panel
+    layout_properties: {grid_position: 'DIDZUD,FPXHVC'}
+    components:
+    - type: Image
+      properties: {}
+      name: image_content
+      layout_properties: {x: 10, y: 101, width: 595}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: true, background: '', bold: true,
+        underline: false, icon: ''}
+      name: description_label
+      layout_properties: {x: 10, y: 320, width: 595}
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: button_1, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_text
+      layout_properties: {x: 202.25, y: 366, width: 256}
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:Gray 800', visible: true, font_size: 20, content: '', font: italic,
+        spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
+      name: name_label
+      layout_properties: {x: 167, y: 38, width: 332}
+  is_package: true
+  custom_component: true
+  properties:
+  - {name: name, type: string, default_value: default, default_binding_prop: true}
+  - {name: image, type: object, default_value: null}
+  - {name: button_callback, type: object, default_value: null}
+  - {name: description, type: string, default_value: default}
+  code: "from ._anvil_designer import CourseItemTemplate\nfrom anvil import *\nimport\
+    \ anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\n\nclass CourseItem(CourseItemTemplate):\n\
+    \ def __init__(self, name, description, button_text, image, button_callback, **properties):\n\
+    \    # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\
+    \    self.name_label.content = name\n    self.description_label.text = description\n\
+    \    self.button_text.text = button_text\n    self.image_content.source = image\n\
+    \    self.button_callback = button_callback\n\n\n   "
+  class_name: CourseItem
+  id: ACJKXKAXWK2Z4UBXDBBRRPKG2SWY3ZJF
+- container:
+    type: ColumnPanel
+    properties: {col_widths: '{}'}
+  components:
+  - type: ColumnPanel
+    properties: {}
+    name: content_panel
+    layout_properties: {grid_position: 'QYEZRX,KXIYWG'}
+  is_package: true
+  code: "from ._anvil_designer import kitchen_itemsTemplate\nfrom anvil import *\n\
+    import anvil.server\nimport anvil.google.auth, anvil.google.drive\nfrom anvil.google.drive\
+    \ import app_files\nimport anvil.users\nimport anvil.tables as tables\nimport\
+    \ anvil.tables.query as q\nfrom anvil.tables import app_tables\nfrom ..CourseItem\
+    \ import CourseItem\nfrom ..Checkout import Checkout\n\nclass kitchen_items(kitchen_itemsTemplate):\n\
+    \  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n\
+    \    self.init_components(**properties)\n    self.load_kitchentable()\n    \n\
+    \  def back(self):\n    self.content_panel.clear()\n    self.load_kitchentable\
+    \ ()\n    \n  def render_checkout(self, course_name):\n    self.content_panel.clear()\n\
+    \    self.content_panel.add_component(Checkout(course_name, self.back))\n\n  def\
+    \ load_kitchentable(self):\n    kitchentable = anvil.server.call('get_kitchentable_details').search()\n\
+    \    course_panel = GridPanel()\n    \n    for i, course in enumerate(kitchentable):\n\
+    \      c = CourseItem(name=course[\"name\"], button_text= course[\"price\"], description=course[\"\
+    description\"], image=course[\"image\"], button_callback=self.render_checkout)\n\
+    \      course_panel.add_component(c, row=str(i//2), width_xs=6)\n    self.content_panel.add_component(course_panel)\n\
+    \n "
+  class_name: kitchen_items
+  id: RISB7RT2SJKTWWVF5KYQ56IASA2VMMIH
+package_name: kAdam
+allow_embedding: false
+name: kAdam
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+metadata: {description: this app is for a hackathon}
+startup_form: base
+native_deps: {head_html: ''}
+db_schema:
+  users:
+    title: Users
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {width: 100}
+      type: bool
+    - name: signed_up
+      admin_ui: {width: 200}
+      type: datetime
+    - name: last_login
+      admin_ui: {width: 200}
+      type: datetime
+    - name: remembered_logins
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: Column5
+      admin_ui: {width: 200}
+      type: simpleObject
+  courses:
+    title: courses
+    client: none
+    server: search
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: price
+      admin_ui: {width: 200}
+      type: string
+    - name: date and time
+      admin_ui: {width: 200}
+      type: datetime
+    - name: image
+      admin_ui: {width: 200}
+      type: media
+    - name: description
+      admin_ui: {width: 200}
+      type: string
+  clothingstable:
+    title: clothingstable
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: price
+      admin_ui: {width: 200}
+      type: string
+    - name: date and time
+      admin_ui: {width: 200}
+      type: datetime
+    - name: image
+      admin_ui: {width: 200}
+      type: media
+    - name: description
+      admin_ui: {width: 200}
+      type: string
+  householdtable:
+    title: householdtable
+    client: none
+    server: search
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: price
+      admin_ui: {width: 200}
+      type: string
+    - name: image
+      admin_ui: {width: 200}
+      type: media
+    - name: date and time
+      admin_ui: {width: 200}
+      type: datetime
+    - name: description
+      admin_ui: {width: 200}
+      type: string
+  studytable:
+    title: studytable
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: price
+      admin_ui: {width: 200}
+      type: string
+    - name: image
+      admin_ui: {width: 200}
+      type: media
+    - name: description
+      admin_ui: {width: 200}
+      type: string
+    - name: date and time
+      admin_ui: {width: 200}
+      type: datetime
+  kitchentable:
+    title: kitchentable
+    client: none
+    server: search
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: price
+      admin_ui: {width: 200}
+      type: string
+    - name: image
+      admin_ui: {width: 200}
+      type: media
+    - name: description
+      admin_ui: {width: 200}
+      type: string
+    - name: date and time
+      admin_ui: {width: 200}
+      type: datetime
+  accessoriestable:
+    title: accessoriestable
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: price
+      admin_ui: {width: 200}
+      type: string
+    - name: image
+      admin_ui: {width: 200}
+      type: media
+    - name: description
+      admin_ui: {width: 200}
+      type: string
+    - name: date and time
+      admin_ui: {width: 200}
+      type: datetime
+dependency_order: []
+dependency_code: {}
+theme:
+  templates:
+  - name: Standard Page
+    description: A page with an app bar and an optional sidebar.
+    img: img/form-templates/material-design.png
+    form:
+      class_name: Form
+      is_package: true
+      container:
+        type: HtmlTemplate
+        properties: {html: '@theme:standard-page.html'}
+      components:
+      - type: ColumnPanel
+        properties: {}
+        name: content_panel
+        layout_properties: {slot: default}
+      - type: FlowPanel
+        properties: {}
+        name: navbar_links
+        layout_properties: {slot: nav-right}
+      code: "from ._anvil_designer import $NAME$Template\nfrom anvil import *\n\n\
+        class $NAME$($NAME$Template):\n\n  def __init__(self, **properties):\n   \
+        \ # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\
+        \n    # Any code you write here will run before the form opens.\n    \n"
+  parameters:
+    roles:
+    - name: text
+      components: [Label, Link]
+    - name: subheading
+      components: [Label]
+    - name: input-prompt
+      components: [Label]
+    - name: headline
+      components: [Label]
+      displayInToolbox: true
+      title: Headline
+      display_in_toolbox: true
+    - name: display-4
+      components: [Label]
+    - name: card
+      components: [ColumnPanel, LinearPanel, XYPanel, RepeatingPanel]
+      displayInToolbox: true
+      title: Card
+      display_in_toolbox: true
+    - name: raised
+      components: [Button, FileLoader]
+    - name: primary-color
+      components: [Button, FileLoader]
+      title: Highlighted Button
+      display_in_toolbox: true
+    - name: secondary-color
+      components: [Button, FileLoader]
+    - name: dense
+      components: [TextBox]
+    - name: selected
+      components: [Link]
+    color_scheme:
+      preset_groups:
+      - name: Primary Colour
+        options:
+        - name: Blue
+          colors:
+          - {name: Primary 500, color: '#2196F3'}
+          - {name: Primary 700, color: '#1976D2'}
+        - name: Orange
+          colors:
+          - {name: Primary 500, color: '#FF9800'}
+          - {name: Primary 700, color: '#F57C00'}
+        - name: Red
+          colors:
+          - {name: Primary 500, color: '#F44336'}
+          - {name: Primary 700, color: '#D32F2F'}
+        - name: Pink
+          colors:
+          - {name: Primary 500, color: '#E91E63'}
+          - {name: Primary 700, color: '#C2185B'}
+        - name: Purple
+          colors:
+          - {name: Primary 500, color: '#9C27B0'}
+          - {name: Primary 700, color: '#7B1FA2'}
+        - name: Deep Purple
+          colors:
+          - {name: Primary 500, color: '#673AB7'}
+          - {name: Primary 700, color: '#512DA8'}
+        - name: Indigo
+          colors:
+          - {name: Primary 500, color: '#3F51B5'}
+          - {name: Primary 700, color: '#303F9F'}
+        - name: Light Blue
+          colors:
+          - {name: Primary 500, color: '#03A9F4'}
+          - {name: Primary 700, color: '#0288D1'}
+        - name: Cyan
+          colors:
+          - {name: Primary 500, color: '#00BCD4'}
+          - {name: Primary 700, color: '#0097A7'}
+        - name: Teal
+          colors:
+          - {name: Primary 500, color: '#009688'}
+          - {name: Primary 700, color: '#00796B'}
+        - name: Green
+          colors:
+          - {name: Primary 500, color: '#4CAF50'}
+          - {name: Primary 700, color: '#388E3C'}
+        - name: Light Green
+          colors:
+          - {name: Primary 500, color: '#8BC34A'}
+          - {name: Primary 700, color: '#689F38'}
+        - name: Lime
+          colors:
+          - {name: Primary 500, color: '#CDDC39'}
+          - {name: Primary 700, color: '#AFB42B'}
+        - name: Deep orange
+          colors:
+          - {name: Primary 500, color: '#FF5722'}
+          - {name: Primary 700, color: '#E64A19'}
+        - name: Brown
+          colors:
+          - {name: Primary 500, color: '#795548'}
+          - {name: Primary 700, color: '#5D4037'}
+        - name: Grey
+          colors:
+          - {name: Primary 500, color: '#9E9E9E'}
+          - {name: Primary 700, color: '#616161'}
+      - name: Secondary Colour
+        options:
+        - name: Blue
+          colors:
+          - {name: Secondary 500, color: '#2196F3'}
+          - {name: Secondary 700, color: '#1976D2'}
+        - name: Orange
+          colors:
+          - {name: Secondary 500, color: '#FF9800'}
+          - {name: Secondary 700, color: '#F57C00'}
+        - name: Red
+          colors:
+          - {name: Secondary 500, color: '#F44336'}
+          - {name: Secondary 700, color: '#D32F2F'}
+        - name: Pink
+          colors:
+          - {name: Secondary 500, color: '#E91E63'}
+          - {name: Secondary 700, color: '#C2185B'}
+        - name: Purple
+          colors:
+          - {name: Secondary 500, color: '#9C27B0'}
+          - {name: Secondary 700, color: '#7B1FA2'}
+        - name: Deep Purple
+          colors:
+          - {name: Secondary 500, color: '#673AB7'}
+          - {name: Secondary 700, color: '#512DA8'}
+        - name: Indigo
+          colors:
+          - {name: Secondary 500, color: '#3F51B5'}
+          - {name: Secondary 700, color: '#303F9F'}
+        - name: Light Blue
+          colors:
+          - {name: Secondary 500, color: '#03A9F4'}
+          - {name: Secondary 700, color: '#0288D1'}
+        - name: Cyan
+          colors:
+          - {name: Secondary 500, color: '#00BCD4'}
+          - {name: Secondary 700, color: '#0097A7'}
+        - name: Teal
+          colors:
+          - {name: Secondary 500, color: '#009688'}
+          - {name: Secondary 700, color: '#00796B'}
+        - name: Green
+          colors:
+          - {name: Secondary 500, color: '#4CAF50'}
+          - {name: Secondary 700, color: '#388E3C'}
+        - name: Light Green
+          colors:
+          - {name: Secondary 500, color: '#8BC34A'}
+          - {name: Secondary 700, color: '#689F38'}
+        - name: Lime
+          colors:
+          - {name: Secondary 500, color: '#CDDC39'}
+          - {name: Secondary 700, color: '#AFB42B'}
+        - name: Deep orange
+          colors:
+          - {name: Secondary 500, color: '#FF5722'}
+          - {name: Secondary 700, color: '#E64A19'}
+        - name: Brown
+          colors:
+          - {name: Secondary 500, color: '#795548'}
+          - {name: Secondary 700, color: '#5D4037'}
+        - name: Grey
+          colors:
+          - {name: Secondary 500, color: '#9E9E9E'}
+          - {name: Secondary 700, color: '#616161'}
+      colors:
+      - {name: Primary 500, color: '#2196F3'}
+      - {name: Primary 700, color: '#1976D2'}
+      - {name: Secondary 500, color: '#FF9800'}
+      - {name: Secondary 700, color: '#F57C00'}
+      - {name: White, color: '#FFFFFF'}
+      - {name: Gray 50, color: '#FAFAFA'}
+      - {name: Gray 100, color: '#F5F5F5'}
+      - {name: Gray 200, color: '#EEEEEE'}
+      - {name: Gray 300, color: '#E0E0E0'}
+      - {name: Gray 600, color: '#757575'}
+      - {name: Gray 800, color: '#424242'}
+      - {name: Gray 900, color: '#212121'}
+      - {name: Black, color: '#000000'}
+  assets:
+  - {name: standard-page.html, content: PGxpbmsgaHJlZj0iaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVJvYm90bzozMDAsNDAwLDUwMCIgcmVsPSJzdHlsZXNoZWV0IiByZWw9InByZWxvYWQiIGFzPSJmb250IiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIj4KCjxkaXYgY2xhc3M9InN0cnVjdHVyZSI+CiAgPGRpdiBjbGFzcz0iYXBwLWJhciIgYW52aWwtZHJvcC1jb250YWluZXI9Ii5hbnZpbC1jb250YWluZXIiIGFudmlsLWRyb3AtcmVkaXJlY3Q9Ii5wbGFjZWhvbGRlciI+CiAgICA8YSBjbGFzcz0ic2lkZWJhci10b2dnbGUiIGFudmlsLWlmLXNsb3QtZW1wdHk9InRvcC1sZWZ0LWJ0biIgYW52aWwtaGlkZS1pZi1zbG90LWVtcHR5PSJsZWZ0LW5hdiIgYW52aWwtZHJvcC1zbG90PSJ0b3AtbGVmdC1idG4iIGhyZWY9ImphdmFzY3JpcHQ6dm9pZCgwKSI+PGkgY2xhc3M9ImZhIGZhLWJhcnMiPjwvaT48L2E+CiAgICA8YSBjbGFzcz0ic2lkZWJhci10b2dnbGUgYW52aWwtZGVzaWduZXItb25seSIgYW52aWwtaWYtc2xvdC1lbXB0eT0idG9wLWxlZnQtYnRuIiBhbnZpbC1pZi1zbG90LWVtcHR5PSJsZWZ0LW5hdiIgYW52aWwtZHJvcC1zbG90PSJ0b3AtbGVmdC1idG4iPjxpIGNsYXNzPSJmYSBmYS1ibGFuayI+PC9pPjwvYT4KICAgIDxkaXYgY2xhc3M9InRvcC1sZWZ0LWJ0biIgYW52aWwtc2xvdD0idG9wLWxlZnQtYnRuIj48L2Rpdj4KICAgIDxkaXYgY2xhc3M9InRpdGxlIiBhbnZpbC1zbG90PSJ0aXRsZSI+CiAgICAgIDxkaXYgY2xhc3M9InBsYWNlaG9sZGVyIGFudmlsLWRlc2lnbmVyLW9ubHkiIGFudmlsLWlmLXNsb3QtZW1wdHk9InRpdGxlIiBhbnZpbC1kcm9wLWhlcmU+RHJvcCB0aXRsZSBoZXJlPC9kaXY+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9ImFwcC1iYXItbmF2IiBhbnZpbC1zbG90PSJuYXYtcmlnaHQiPgogICAgICA8ZGl2IGNsYXNzPSJwbGFjZWhvbGRlciBhbnZpbC1kZXNpZ25lci1vbmx5IiBhbnZpbC1pZi1zbG90LWVtcHR5PSJuYXYtcmlnaHQiIGFudmlsLWRyb3AtaGVyZT5Ecm9wIGEgRmxvd1BhbmVsIGhlcmU8L2Rpdj4KICAgIDwvZGl2PgogICAgPGRpdiBzdHlsZT0iY2xlYXI6Ym90aCI+PC9kaXY+CiAgPC9kaXY+CgogIDxkaXYgY2xhc3M9Im5hdi1ob2xkZXIiPgogICAgPGRpdiBjbGFzcz0ibGVmdC1uYXYgYW52aWwtbWVhc3VyZS10aGlzIiBhbnZpbC1zbG90LXJlcGVhdD0ibGVmdC1uYXYiIGFudmlsLWRyb3AtY29udGFpbmVyPSI+LmFudmlsLWNvbnRhaW5lciI+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9ImxlZnQtbmF2LXBsYWNlaG9sZGVyIGFudmlsLWRlc2lnbmVyLW9ubHkiIGFudmlsLWlmLXNsb3QtZW1wdHk9ImxlZnQtbmF2IiBhbnZpbC1kcm9wLXNsb3Q9ImxlZnQtbmF2Ij4KICAgICAgPGRpdiBjbGFzcz0icHJvbXB0Ij5UbyBhZGQgYSBzaWRlYmFyLCBkcm9wIGEgQ29sdW1uUGFuZWwgaGVyZS48L2Rpdj4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9ImNvbnRlbnQiPgogICAgICA8ZGl2IGFudmlsLXNsb3QtcmVwZWF0PSJkZWZhdWx0IiBjbGFzcz0iYW52aWwtbWVhc3VyZS10aGlzIj48L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0icGxhY2Vob2xkZXIgZHJvcC1oZXJlIiBhbnZpbC1pZi1zbG90LWVtcHR5PSJkZWZhdWx0IiBhbnZpbC1kcm9wLXNsb3Q9ImRlZmF1bHQiPkRyb3AgYSBDb2x1bW5QYW5lbCBoZXJlLjwvZGl2PgogICAgPC9kaXY+CiAgPC9kaXY+CiAgPGRpdiBjbGFzcz0ibmF2LXNoaWVsZCI+PC9kaXY+CjwvZGl2Pgo8ZGl2IGFudmlsLWRyb3AtZGVmYXVsdCBhbnZpbC1kcm9wLXJlZGlyZWN0PSIucGxhY2Vob2xkZXIiIGFudmlsLWRyb3AtY29udGFpbmVyPSIuYW52aWwtY29udGFpbmVyIj48L2Rpdj4KIAo8c2NyaXB0PgogIGZ1bmN0aW9uIGhpZGVTaWRlYmFyKCkgewogICAgdmFyIGxuID0gJCgnLnN0cnVjdHVyZSA+IC5uYXYtaG9sZGVyID4gLmxlZnQtbmF2Jyk7CiAgICBsbi5hbmltYXRlKHtsZWZ0OiAtbG4ub3V0ZXJXaWR0aCgpfSwgZnVuY3Rpb24oKSB7CiAgICAgIGxuLnJlbW92ZUNsYXNzKCJpbi10cmFuc2l0aW9uIHNob3duIikuYWRkQ2xhc3MoImhpZGRlbiIpOwogICAgICAkKCcubmF2LXNoaWVsZCcpLnJlbW92ZUNsYXNzKCJzaG93biIpOwogICAgICAkKHdpbmRvdykudHJpZ2dlcigncmVzaXplJyk7CiAgICB9KTsKICB9CiAgZnVuY3Rpb24gc2hvd1NpZGViYXIoKSB7CiAgICB2YXIgbG4gPSAkKCcuc3RydWN0dXJlID4gLm5hdi1ob2xkZXIgPiAubGVmdC1uYXYnKTsKICAgICQoJy5uYXYtc2hpZWxkJykuYWRkQ2xhc3MoInNob3duIik7CiAgICBsbi5hZGRDbGFzcygic2hvd24iKS5yZW1vdmVDbGFzcygiaGlkZGVuIikuY3NzKHtsZWZ0OiAiLTEwMCUifSkuY3NzKHtsZWZ0OiAtbG4ub3V0ZXJXaWR0aCgpfSkuYW5pbWF0ZSh7bGVmdDogMH0sIGZ1bmN0aW9uKCkgewogICAgICBsbi5yZW1vdmVDbGFzcygiaW4tdHJhbnNpdGlvbiIpOwogICAgfSk7CiAgICAkKHdpbmRvdykudHJpZ2dlcigncmVzaXplJyk7CiAgfQogICQoJy5zaWRlYmFyLXRvZ2dsZSwgLm5hdi1zaGllbGQnKS5vZmYoJ2NsaWNrJykub24oJ2NsaWNrJywgZnVuY3Rpb24oKSB7CiAgICB2YXIgbG4gPSAkKCcuc3RydWN0dXJlID4gLm5hdi1ob2xkZXIgPiAubGVmdC1uYXYnKTsKICAgIGlmIChsbi5pcygiOnZpc2libGUiKSB8fCAkKCcubmF2LXNoaWVsZCcpLmlzKCIuc2hvd24iKSkgewogICAgICBoaWRlU2lkZWJhcigpOwogICAgfSBlbHNlIGlmKCFsbi5pcygiOmVtcHR5IikpIHsKICAgICAgc2hvd1NpZGViYXIoKTsKICAgIH0KICB9KTsKICAkKCcubGVmdC1uYXYnKS5vZmYoJ2NsaWNrJykub24oJ2NsaWNrJywgJ2EsIGJ1dHRvbicsIGZ1bmN0aW9uKCkgewogICAgaWYgKCQoJy5uYXYtc2hpZWxkJykuaXMoIjp2aXNpYmxlIikpIHsKICAgICAgJCgnLm5hdi1zaGllbGQnKS50cmlnZ2VyKCdjbGljaycpOwogICAgfQogIH0pOwo8L3NjcmlwdD4=,
+    id: 6LNNWRUJDBLYUCS6BWGO5G746EEIZAL6}
+  - {name: theme.css, content: LyoqCiBUaGlzIENTUyBpbXBsZW1lbnRzIHRoZSBNYXRlcmlhbCBEZXNpZ24gbG9vayBhbmQgZmVlbCBmb3IgQW52aWwgYXBwcy4KICoqLwoKLyogU3RvcCBwYW5lbC1jb2xzIGN1dHRpbmcgb2ZmIGRyb3Agc2hhZG93cyAqLwouYW52aWwtcGFuZWwtY29sIHsKICBwYWRkaW5nLWJvdHRvbTogMTBweDsKICBtYXJnaW4tYm90dG9tOiAtMTBweDsKfQoKLmNvbnRlbnQgPiAucGxhY2Vob2xkZXIgewogIG1hcmdpbjogMTZweDsKICBjb2xvcjogIzg4ODsKICBmb250LXNpemU6IDE4cHg7CiAgb3V0bGluZTogMXB4IGRvdHRlZDsKICBwYWRkaW5nOiAxNnB4OwogIHRleHQtYWxpZ246IGNlbnRlcjsKfQoKLyogUHV0IHRoaW5ncyBvbiBhIDRweCBncmlkIChub25lIG9mIHRoaXMgN3B4IG5vbnNlbnNlKSAqLwouaGFzLXRleHQgLmFudmlsLWNvbXBvbmVudC1pY29uLmxlZnQtaWNvbiB7IG1hcmdpbi1yaWdodDogOHB4OyB9Ci5oYXMtdGV4dCAuYW52aWwtY29tcG9uZW50LWljb24ucmlnaHQtaWNvbiB7IG1hcmdpbi1sZWZ0OiA4cHg7IH0KCmE+LmFudmlsLWNvbXBvbmVudC1pY29uLmxlZnRfZWRnZS1pY29uLAphPi5hbnZpbC1jb21wb25lbnQtaWNvbi5yaWdodF9lZGdlLWljb24sCi5hbnZpbC1sYWJlbD4uYW52aWwtY29tcG9uZW50LWljb24ubGVmdF9lZGdlLWljb24sCi5hbnZpbC1sYWJlbD4uYW52aWwtY29tcG9uZW50LWljb24ucmlnaHRfZWRnZS1pY29uIHsKICBwYWRkaW5nLXRvcDogOHB4OwogIHBhZGRpbmctYm90dG9tOiA4cHg7Cn0KLmFudmlsLWxhYmVsPi5sYWJlbC10ZXh0LCBhPi5saW5rLXRleHQgewogIHBhZGRpbmctdG9wOiA4cHg7CiAgcGFkZGluZy1ib3R0b206IDhweDsKfQouZmlsZS1sb2FkZXI+bGFiZWwgewogICAgcGFkZGluZzogOHB4Owp9Ci5jaGVja2JveCBsYWJlbCwgLnJhZGlvIGxhYmVsIHsKICAgIHBhZGRpbmctdG9wOiA4cHg7IHBhZGRpbmctcmlnaHQ6IDhweDsgcGFkZGluZy1ib3R0b206IDhweDsKfQouYW52aWwtc3BhY2luZy1hYm92ZS1ub25lIHsgbWFyZ2luLXRvcDogMHB4OyB9Ci5hbnZpbC1zcGFjaW5nLWFib3ZlLXNtYWxsIHsgbWFyZ2luLXRvcDogNHB4OyB9Ci5hbnZpbC1zcGFjaW5nLWFib3ZlLW1lZGl1bSB7IG1hcmdpbi10b3A6IDhweDsgfQouYW52aWwtc3BhY2luZy1hYm92ZS1sYXJnZSB7IG1hcmdpbi10b3A6IDE2cHg7IH0KLmFudmlsLXNwYWNpbmctYmVsb3ctbm9uZSB7IG1hcmdpbi1ib3R0b206IDBweDsgfQouYW52aWwtc3BhY2luZy1iZWxvdy1zbWFsbCB7IG1hcmdpbi1ib3R0b206IDRweDsgfQouYW52aWwtc3BhY2luZy1iZWxvdy1tZWRpdW0geyBtYXJnaW4tYm90dG9tOiA4cHg7IH0KLmFudmlsLXNwYWNpbmctYmVsb3ctbGFyZ2UgeyBtYXJnaW4tYm90dG9tOiAxNnB4OyB9CgoKLmNvbC1wYWRkaW5nLmNvbC1wYWRkaW5nLXRpbnkgeyBwYWRkaW5nOiAwIDJweDsgfQouY29sdW1uLXBhbmVsLmNvbC1wYWRkaW5nLXRpbnkgPiAuYW52aWwtcGFuZWwtc2VjdGlvbiA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWNvbnRhaW5lciA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWd1dHRlciB7IG1hcmdpbjogMCAtMnB4OyB9CgouY29sLXBhZGRpbmcuY29sLXBhZGRpbmctc21hbGwgeyBwYWRkaW5nOiAwIDRweDsgfQouY29sdW1uLXBhbmVsLmNvbC1wYWRkaW5nLXNtYWxsID4gLmFudmlsLXBhbmVsLXNlY3Rpb24gPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1jb250YWluZXIgPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1ndXR0ZXIgeyBtYXJnaW46IDAgLTRweDsgfQoKLmNvbC1wYWRkaW5nLmNvbC1wYWRkaW5nLW1lZGl1bSB7IHBhZGRpbmc6IDAgOHB4OyB9Ci5jb2x1bW4tcGFuZWwuY29sLXBhZGRpbmctbWVkaXVtID4gLmFudmlsLXBhbmVsLXNlY3Rpb24gPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1jb250YWluZXIgPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1ndXR0ZXIgeyBtYXJnaW46IDAgLThweDsgfQoKLmNvbC1wYWRkaW5nLmNvbC1wYWRkaW5nLWxhcmdlIHsgcGFkZGluZzogMCAxMnB4OyB9Ci5jb2x1bW4tcGFuZWwuY29sLXBhZGRpbmctbGFyZ2UgPiAuYW52aWwtcGFuZWwtc2VjdGlvbiA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWNvbnRhaW5lciA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWd1dHRlciB7IG1hcmdpbjogMCAtMTJweDsgfQoKLmNvbC1wYWRkaW5nLmNvbC1wYWRkaW5nLWh1Z2UgeyBwYWRkaW5nOiAwIDIwcHg7IH0KLmNvbHVtbi1wYW5lbC5jb2wtcGFkZGluZy1odWdlID4gLmFudmlsLXBhbmVsLXNlY3Rpb24gPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1jb250YWluZXIgPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1ndXR0ZXIgeyBtYXJnaW46IDAgLTIwcHg7IH0KCi5mbG93LXBhbmVsLmZsb3ctc3BhY2luZy10aW55ID4gLmZsb3ctcGFuZWwtZ3V0dGVyIHsgbWFyZ2luOiAwIC0ycHg7IH0KLmZsb3ctcGFuZWwuZmxvdy1zcGFjaW5nLXRpbnkgPiAuZmxvdy1wYW5lbC1ndXR0ZXIgPiAuZmxvdy1wYW5lbC1pdGVtIHsgCiAgbWFyZ2luLWxlZnQ6IDJweDsKICBtYXJnaW4tcmlnaHQ6IDJweDsKfQoKLmZsb3ctcGFuZWwuZmxvdy1zcGFjaW5nLXNtYWxsID4gLmZsb3ctcGFuZWwtZ3V0dGVyIHsgbWFyZ2luOiAwIC00cHg7IH0KLmZsb3ctcGFuZWwuZmxvdy1zcGFjaW5nLXNtYWxsID4gLmZsb3ctcGFuZWwtZ3V0dGVyID4gLmZsb3ctcGFuZWwtaXRlbSB7IAogIG1hcmdpbi1sZWZ0OiA0cHg7CiAgbWFyZ2luLXJpZ2h0OiA0cHg7Cn0KCi5mbG93LXBhbmVsLmZsb3ctc3BhY2luZy1tZWRpdW0gPiAuZmxvdy1wYW5lbC1ndXR0ZXIgeyBtYXJnaW46IDAgLThweDsgfQouZmxvdy1wYW5lbC5mbG93LXNwYWNpbmctbWVkaXVtID4gLmZsb3ctcGFuZWwtZ3V0dGVyID4gLmZsb3ctcGFuZWwtaXRlbSB7IAogIG1hcmdpbi1sZWZ0OiA4cHg7CiAgbWFyZ2luLXJpZ2h0OiA4cHg7Cn0KCi5mbG93LXBhbmVsLmZsb3ctc3BhY2luZy1sYXJnZSA+IC5mbG93LXBhbmVsLWd1dHRlciB7IG1hcmdpbjogMCAtMTJweDsgfQouZmxvdy1wYW5lbC5mbG93LXNwYWNpbmctbGFyZ2UgPiAuZmxvdy1wYW5lbC1ndXR0ZXIgPiAuZmxvdy1wYW5lbC1pdGVtIHsgCiAgbWFyZ2luLWxlZnQ6IDEycHg7CiAgbWFyZ2luLXJpZ2h0OiAxMnB4Owp9CgouZmxvdy1wYW5lbC5mbG93LXNwYWNpbmctaHVnZSA+IC5mbG93LXBhbmVsLWd1dHRlciB7IG1hcmdpbjogMCAtMjBweDsgfQouZmxvdy1wYW5lbC5mbG93LXNwYWNpbmctaHVnZSA+IC5mbG93LXBhbmVsLWd1dHRlciA+IC5mbG93LXBhbmVsLWl0ZW17IAogIG1hcmdpbi1sZWZ0OiAyMHB4OwogIG1hcmdpbi1yaWdodDogMjBweDsKfQoKCi8qIFR5cG9ncmFwaHkgKi8KYm9keSB7CiAgZm9udC1mYW1pbHk6IFJvYm90bywgTm90bywgQXJpYWwsIHNhbnMtc2VyaWY7CiAgZm9udC1zaXplOiAxNHB4OwogIGxpbmUtaGVpZ2h0OiAxLjQyODY7CiAgYmFja2dyb3VuZC1jb2xvcjogI2ZhZmFmYTsKfQoKQG1lZGlhIHByaW50IHsKICBib2R5IHsKICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlOwogIH0KfQoKYSwgYTpmb2N1cyB7CiAgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogIGNvbG9yOiAlY29sb3I6UHJpbWFyeSA3MDAlOwp9CgphOmhvdmVyLCBhOmFjdGl2ZSB7CiAgY29sb3I6ICVjb2xvcjpQcmltYXJ5IDUwMCU7Cn0KCi5hbnZpbC1sYWJlbCB7Ci8qICBmb250LXNpemU6IDE2cHg7Ki8KfQoKLmFudmlsLXJvbGUtc3ViaGVhZGluZyB7CiAgZm9udC1zaXplOiAxNnB4OwogIGxpbmUtaGVpZ2h0OiAyNGRwOwp9CgouYW52aWwtcm9sZS1oZWFkbGluZSB7CiAgZm9udC1zaXplOiAyNHB4OwogIGxpbmUtaGVpZ2h0OiAzMnB4Owp9CgouYW52aWwtcm9sZS1pbnB1dC1wcm9tcHQgewogIGZvbnQtc2l6ZTogMTZweDsKICBsaW5lLWhlaWdodDogMS41Owp9CgouYW52aWwtcm9sZS1kaXNwbGF5LTQgewogIGZvbnQtc2l6ZTogMTEycHg7CiAgZm9udC13ZWlnaHQ6IGxpZ2h0Owp9CgouYW52aWwtcm9sZS10ZXh0IHsKICBmb250LXNpemU6IDE0cHg7Cn0KLmFudmlsLXJvbGUtdGV4dCA+IC5sYWJlbC10ZXh0LCAuYW52aWwtcm9sZS10ZXh0IC5saW5rLXRleHQgewogIHBhZGRpbmctdG9wOiAwOwogIHBhZGRpbmctYm90dG9tOiAwOwp9CgovKiBQYWdlIHN0cnVjdHVyZTogQXBwIGJhciB3aXRoIG9wdGlvbmFsIGxlZnQgbmF2ICovCi5zdHJ1Y3R1cmUgewogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsKICBtaW4taGVpZ2h0OiAxMDB2aDsKICBtaW4taGVpZ2h0OiBjYWxjKDEwMHZoIC0gJWFudmlsLWJhbm5lci1oZWlnaHQlKTsKICBoZWlnaHQ6IDA7IC8qIFRvIG1ha2UgZmxleC1ncm93IHdvcmsgaW4gSUUgKi8KfQoKLyogSG93ZXZlciwgdGhpcyBicmVha3MgdGhlIGRlc2lnbmVyJ3MgaGVpZ2h0IG1lYXN1cmVtZW50LiBJRSBpc24ndCBzdXBwb3J0ZWQgZm9yIHRoZSBkZXNpZ25lciwgc28gc2V0IGl0IGJhY2suICovCi5kZXNpZ25lciAuc3RydWN0dXJlIHsKICBoZWlnaHQ6IGluaXRpYWw7Cn0KCi5hcHAtYmFyIHsKICBmbGV4OiAwIDA7CiAgZmxleC1iYXNpczogYXV0bzsKICBmbGV4LWJhc2lzOiBjb250ZW50Owp9CgoubmF2LWhvbGRlciB7CiAgZmxleC1ncm93OiAxOwogIG92ZXJmbG93LXk6IGF1dG87Cn0KCkBtZWRpYSBwcmludCB7CiAgLm5hdi1ob2xkZXIgewogICAgb3ZlcmZsb3cteTogaW5pdGlhbDsKICB9Cn0KCgovKiBNb2JpbGUgYW5kIGRlc2t0b3AgbWFyZ2lucyBmb3IgY29udGVudCAqLwouY29udGVudCA+ICogPiAuYW52aWwtY29udGFpbmVyIHsKICBwYWRkaW5nOiA4cHg7Cn0KCkBtZWRpYShtaW4td2lkdGg6OTkxcHgpIHsKICAuY29udGVudCA+ICogPiAuYW52aWwtY29udGFpbmVyIHsKICAgIHBhZGRpbmc6IDE2cHggMjRweDsKICB9Cn0KCi5jb250ZW50IC5hbnZpbC1tZWFzdXJlLXRoaXMgewogIHBhZGRpbmctYm90dG9tOiAxcHg7IC8qIFByZXZlbnQgbWFyZ2luIGNvbGxhcHNlIG1lc3NpbmcgdXAgZW1iZWRkaW5nICovCn0KCi8qIEFsbG93IG92ZXJmbG93cyB0byBzaG93IGRyb3Agc2hhZG93cyBpbiBDb2x1bW5QYW5lbHMKICAgVGhpcyBjYW4gY3JlYXRlIHVud2FudGVkIHNjcm9sbGJhcnM7IHdlIGNvbXBlbnNhdGUgZm9yIHRoaXMgYXQgdGhlIHRvcCBsZXZlbCB3aXRoIC5uYXYtaG9sZGVyIC5jb250ZW50IHtvdmVyZmxvdy14OiBoaWRkZW47fQoqLwouYW52aWwtY29udGFpbmVyLW92ZXJmbG93IHsKICBvdmVyZmxvdy14OiB2aXNpYmxlOwogIG92ZXJmbG93LXk6IHZpc2libGU7Cn0KCgovKiBEZXNrdG9wOiBOYXYgYmFyIHBpbm5lZCAqLwoKLm5hdi1ob2xkZXIgewogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IHJvdzsKfQoKLm5hdi1ob2xkZXIgLmxlZnQtbmF2IHsKICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgZmxleC1zaHJpbms6IDA7CiAgbWluLXdpZHRoOiAxNjBweDsKICBtYXgtd2lkdGg6IDQwMHB4Owp9CgoubmF2LXNoaWVsZCB7CiAgZGlzcGxheTogbm9uZTsKfQoKLyogTW9iaWxlOiBOYXYgYmFyIGlzIGEgbW9kYWwgb3ZlcmxheSAqLwoKQG1lZGlhKG1heC13aWR0aDo5OThweCkgewogIGh0bWw6bm90KC5kZXNpZ25lcikgLm5hdi1ob2xkZXIgewogICAgZGlzcGxheTogYmxvY2s7CiAgfQogIGh0bWw6bm90KC5kZXNpZ25lcikgLm5hdi1ob2xkZXIgLmxlZnQtbmF2IHsKICAgIHBvc2l0aW9uOiBmaXhlZDsKICAgIHRvcDogMDsKICAgIGJvdHRvbTogMDsKICAgIHdpZHRoOiBjYWxjKDEwMCUgLSA1NnB4KTsKICAgIG1heC13aWR0aDogMzYwcHg7CiAgICB6LWluZGV4OiAzOwogICAgYm9yZGVyLXJpZ2h0OiBub25lOwogIC8qIDE2ZHAgKi8gYm94LXNoYWRvdzogMCAxNnB4IDI0cHggMnB4IHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgNnB4IDMwcHggNXB4IHJnYmEoMCwgMCwgMCwgMC4xMiksIDAgOHB4IDEwcHggLTVweCByZ2JhKDAsIDAsIDAsIDAuMik7CgogICAgZGlzcGxheTogbm9uZTsKICAgIHRyYW5zaXRpb246IHJpZ2h0IDAuNXM7CiAgfQogIAogIGh0bWw6bm90KC5kZXNpZ25lcikgLm5hdi1ob2xkZXIgLmxlZnQtbmF2LnNob3duIHsKICAgIGRpc3BsYXk6IGJsb2NrOwogIH0KICAubmF2LXNoaWVsZC5zaG93biB7CiAgICBkaXNwbGF5OiBibG9jazsKICAgIHBvc2l0aW9uOiBmaXhlZDsKICAgIHRvcDogMDsKICAgIGJvdHRvbTogMDsKICAgIGxlZnQ6IDA7CiAgICByaWdodDogMDsKICAgIHotaW5kZXg6IDI7CiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsMCwwLDAuMik7CiAgfQogfQoKLm5hdi1ob2xkZXIgLmxlZnQtbmF2LCAubGVmdC1uYXYtcGxhY2Vob2xkZXIgewogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsKICBiYWNrZ3JvdW5kOiB3aGl0ZTsKICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAjZTBlMGUwOwogIGZvbnQtc2l6ZTogMTRweDsKICBmb250LXdlaWdodDogNTAwOwogIGNvbG9yOiByZ2JhKDAsMCwwLDAuODcpOwogIG92ZXJmbG93LXg6IGhpZGRlbjsKICBvdmVyZmxvdy15OiBhdXRvOwp9CgoubGVmdC1uYXYtcGxhY2Vob2xkZXIgewogIGRpc3BsYXk6IGJsb2NrOwogIHBhZGRpbmc6IDhweDsKICBsaW5lLWhlaWdodDogMTsKICB3aWR0aDogNThweDsKfQoubGVmdC1uYXYtcGxhY2Vob2xkZXIgLnByb21wdCB7CiAgZGlzcGxheTogaW5saW5lLWJsb2NrOwogIHdoaXRlLXNwYWNlOiBub3dyYXA7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwwKSByb3RhdGUoLTkwZGVnKSB0cmFuc2xhdGUoLTUwJSwwKSB0cmFuc2xhdGUoMTVweCwxNnB4KTsKICBwYWRkaW5nOiAxNnB4IDE2cHg7CiAgY29sb3I6ICM4ODg7CiAgb3V0bGluZTogMXB4IGRvdHRlZCAjODg4OwogIHZpc2liaWxpdHk6IGhpZGRlbjsKfQouYW52aWwtaGlnaGxpZ2h0IC5sZWZ0LW5hdi1wbGFjZWhvbGRlciAucHJvbXB0IHsKICB2aXNpYmlsaXR5OiB2aXNpYmxlOwp9CgoubGVmdC1uYXYgPiAuY29sdW1uLXBhbmVsIHsKICBwYWRkaW5nOiAyNHB4IDA7Cn0KLmxlZnQtbmF2ID4gLmNvbHVtbi1wYW5lbCA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uID4gLmFudmlsLXBhbmVsLXNlY3Rpb24tY29udGFpbmVyOm5vdCguZnVsbC13aWR0aC1yb3cpIHsKICBtYXJnaW46IDAgMTZweDsKICB3aWR0aDogaW5pdGlhbDsKICBtYXgtd2lkdGg6IGluaXRpYWw7CiAgb3ZlcmZsb3cteDogdmlzaWJsZTsKfQoubGVmdC1uYXYgPiAuY29sdW1uLXBhbmVsID4gLmFudmlsLXBhbmVsLXNlY3Rpb246Zmlyc3QtY2hpbGQgPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1jb250YWluZXIuZnVsbC13aWR0aC1yb3cgewogIG1hcmdpbi10b3A6IC0yNHB4Owp9Ci5sZWZ0LW5hdiA+IC5jb2x1bW4tcGFuZWwgPiAuYW52aWwtcGFuZWwtc2VjdGlvbiA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWNvbnRhaW5lciA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWd1dHRlciA+IC5hbnZpbC1wYW5lbC1yb3cgPiAuYW52aWwtcGFuZWwtY29sIHsKICBvdmVyZmxvdy14OiB2aXNpYmxlOwp9CgovKiBNYWtlIGFsbCB0aGUgc2lkZWJhciBpY29ucyBsb29rIG5pY2UgKi8KCi5sZWZ0LW5hdiAuYW52aWwtY29tcG9uZW50LWljb24gewogIGZvbnQtc2l6ZTogMTYwJTsKfQoKLmxlZnQtbmF2IC5hbnZpbC1jb21wb25lbnQtaWNvbi5sZWZ0LWljb24gewogIHdpZHRoOiAwOwogIG1hcmdpbi1yaWdodDogNTZweDsKICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgdG9wOiAwLjE1ZW07ICAKfQoKLmxlZnQtbmF2IC5hbnZpbC1jb21wb25lbnQtaWNvbi5sZWZ0X2VkZ2UtaWNvbiwgLmxlZnQtbmF2IC5hbnZpbC1jb21wb25lbnQtaWNvbi5yaWdodF9lZGdlLWljb24gewogIGxlZnQ6IDE2cHg7CiAgcGFkZGluZy10b3A6IDJweDsKICB3aWR0aDogMDsKfQoKLmxlZnQtbmF2IC5hbnZpbC1jb21wb25lbnQtaWNvbi5yaWdodF9lZGdlLWljb24gewogIGxlZnQ6IGluaXRpYWw7CiAgcmlnaHQ6IDE2cHg7CiAgdG9wOiAwOwogIHBhZGRpbmctdG9wOiAycHg7Cn0KCi8qIFNpZGViYXIgbGlua3MgKGFuZCBsYWJlbHMgd2l0aCBlZGdlIGljb25zKSBnbyArMTZweCB3aWRlcgogICAoVG9wLWxldmVsIGNvbHVtbnMgaW4gQ29sdW1uUGFuZWxzIGdldCBvdmVyZmxvdy14IHZpc2libGUgW3NlZSBhYm92ZV10byBlbmFibGUgdGhpcykKKi8KCi5sZWZ0LW5hdiBhLCAubGVmdC1uYXYgLmFudmlsLWxhYmVsLmxlZnRfZWRnZS1pY29uLCAubGVmdC1uYXYgLmFudmlsLWxhYmVsLnJpZ2h0X2VkZ2UtaWNvbiB7CiAgY29sb3I6IHJnYmEoMCwwLDAsMC44Nyk7CiAgbWFyZ2luOiAwIC0xNnB4OwogIHBhZGRpbmc6IDRweCAxNnB4Owp9CgoubGVmdC1uYXYgLmFudmlsLWNvbXBvbmVudC5sZWZ0X2VkZ2UtaWNvbiB7CiAgcGFkZGluZy1sZWZ0OiA3MnB4Owp9CgoubGVmdC1uYXYgYTpob3ZlciwgLmxlZnQtbmF2IC5hbnZpbC1yb2xlLXNlbGVjdGVkIHsKICBjb2xvcjogJWNvbG9yOlByaW1hcnkgNzAwJTsKICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsMCwwLC4wOCk7Cn0KCi5kZXNpZ25lciAubmF2LWhvbGRlciAubGVmdC1uYXYgewogIG1pbi13aWR0aDogNTZweDsKfQoKLmRlc2lnbmVyIC5uYXYtaG9sZGVyIC5sZWZ0LW5hdiA+IC5hbnZpbC1jb21wb25lbnQgewogIG1pbi13aWR0aDogMTYwcHg7Cn0KCi5uYXYtaG9sZGVyIC5sZWZ0LW5hdiA+IC5hbnZpbC1jb21wb25lbnQgewogIG1hcmdpbi10b3A6IDA7CiAgbWFyZ2luLWJvdHRvbTogMDsKfQoKLm5hdi1ob2xkZXIgLmNvbnRlbnQgewogIGZsZXg6IDE7CiAgb3ZlcmZsb3cteDogaGlkZGVuOwp9CgovKiBDb21wb25lbnRzOiBBcHAgQmFyICovCi5hcHAtYmFyIHsKICBtaW4taGVpZ2h0OiA1NnB4OwogIGxpbmUtaGVpZ2h0OiA0MHB4OwogIHBhZGRpbmc6IDAgMTZweCAwIDcycHg7CgogIGZvbnQtc2l6ZTogMjBweDsKICBmb250LXdlaWdodDogNTAwOwogIGNvbG9yOiB3aGl0ZTsKICBiYWNrZ3JvdW5kLWNvbG9yOiAlY29sb3I6UHJpbWFyeSA1MDAlOwogIAogIHotaW5kZXg6IDE7CiAgLyogNGRwICovIGJveC1zaGFkb3c6IDAgNHB4IDVweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgMXB4IDEwcHggMCByZ2JhKDAsIDAsIDAsIDAuMTIpLCAwIDJweCA0cHggLTFweCByZ2JhKDAsIDAsIDAsIDAuMik7ICAKfQoKLmFwcC1iYXIgLmFudmlsLWNvbXBvbmVudCB7CiAgbWFyZ2luLXRvcDogMDsKICBtYXJnaW4tYm90dG9tOiAwOwp9CgouYXBwLWJhciA+IC5zaWRlYmFyLXRvZ2dsZSB7IGRpc3BsYXk6YmxvY2s7IGZsb2F0OmxlZnQ7ICBtYXJnaW4tbGVmdDogLTYxcHg7IH0KLmFwcC1iYXIgPiAudG9wLWxlZnQtYnRuIHsgZmxvYXQ6IGxlZnQ7IG1hcmdpbi1sZWZ0OiAtNjBweDsgbWFyZ2luLXJpZ2h0OiAtNDBweDsgfQouYXBwLWJhciA+IC50aXRsZSB7IGZsb2F0OiBsZWZ0OyB9Ci5hcHAtYmFyID4gLnRpdGxlID4gLnBsYWNlaG9sZGVyIHsgb3V0bGluZTogMXB4IGRvdHRlZDsgcGFkZGluZy1sZWZ0OiAxNnB4OyBwYWRkaW5nLXJpZ2h0OiAxNnB4OyBtYXJnaW46IDhweCA4cHggMDsgZGlzcGxheTpub25lOyB9Ci5hcHAtYmFyID4gLmFwcC1iYXItbmF2IHsgZmxvYXQ6IHJpZ2h0OyBmb250LXdlaWdodDogbm9ybWFsOyB9Ci5hcHAtYmFyID4gLmFwcC1iYXItbmF2IC5wbGFjZWhvbGRlciB7IG1hcmdpbi10b3A6IDhweDsgcGFkZGluZzogMCA4cHg7IH0KLmFudmlsLWhpZ2hsaWdodCAuYXBwLWJhciA+IC5hcHAtYmFyLW5hdiAucGxhY2Vob2xkZXIgeyBvdXRsaW5lOiAxcHggZG90dGVkICNjY2M7IH0KLmFudmlsLWhpZ2hsaWdodCAuYXBwLWJhciA+IC50aXRsZSA+IC5wbGFjZWhvbGRlciB7IGRpc3BsYXk6YmxvY2s7IH0KCi5hcHAtYmFyIGEsIC5hcHAtYmFyIC5hbnZpbC1jb21wb25lbnQgewogIGRpc3BsYXk6IGJsb2NrOwogIGNvbG9yOiB3aGl0ZTsKICBsaW5lLWhlaWdodDogMzBweDsKICBtaW4td2lkdGg6IDMwcHg7CiAgbWluLWhlaWdodDogMzBweDsKICBtYXJnaW46IDVweCA0cHggMDsKfQoKLmFwcC1iYXIgLnRpdGxlIC5hbnZpbC1jb21wb25lbnQgewogIG1hcmdpbi1sZWZ0OiAwOwp9CgouYXBwLWJhciBpbnB1dC5hbnZpbC1jb21wb25lbnQsIC5hcHAtYmFyIC5hbnZpbC1jb21wb25lbnQgaW5wdXQgewogIGxpbmUtaGVpZ2h0OiAzMHB4OwogIGNvbG9yOiB3aGl0ZTsKfQoKLmFwcC1iYXIgc2VsZWN0LmZvcm0tY29udHJvbCB7CiAgaGVpZ2h0OiA0M3B4OyAvKiAzMHB4IGxpbmUgaGVpZ2h0ICsgMTJweCBwYWRkaW5nICsgMXB4IGJvcmRlciAqLwp9CgouYXBwLWJhciAuYW52aWwtY29tcG9uZW50LWljb24tcHJlc2VudCAuYW52aWwtY29tcG9uZW50LWljb24sIC5hcHAtYmFyIC5zaWRlYmFyLXRvZ2dsZSAuZmEgewogIHdpZHRoOiAzMHB4OwogIHRleHQtYWxpZ246IGNlbnRlcjsKfQoKLyogRG9uJ3QgcHV0IHNwYWNpbmcgb24gdGhlIHRvcC1sZXZlbCBjb250YWluZXIgKGVnIEZsb3dQYW5lbCkgKi8KLmFwcC1iYXItbmF2ID4gLmFudmlsLWNvbnRhaW5lciB7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7CiAgbWluLWhlaWdodDogNTZweDsKfQoKLmFudmlsLWhpZ2hsaWdodCAuYXBwLWJhci1uYXYgPiAuYW52aWwtY29udGFpbmVyOm5vdCguaGFzLWNvbXBvbmVudHMpOm5vdChhKSB7CiAgb3V0bGluZTogMXB4IGRvdHRlZCAjZmZmOwogIG1hcmdpbi10b3A6IDhweDsKICBtaW4taGVpZ2h0OiA0MHB4OwogIHBhZGRpbmc6IDVweCA4cHg7Cn0KCi5hbnZpbC1oaWdobGlnaHQgLmFwcC1iYXItbmF2ID4gLmFudmlsLWNvbnRhaW5lcjpub3QoLmhhcy1jb21wb25lbnRzKTpub3QoYSk6OmFmdGVyIHsgIAogIGNvbnRlbnQ6ICJEcm9wIExpbmtzIGhlcmUiCn0KCi8qIFJlamlnIG1hcmdpbiB2cyBwYWRkaW5nIHRvIGdpdmUgbGlua3MgdGhlIGhhbG8gKi8KLmFwcC1iYXIgYSwgLmFwcC1iYXIgYS5hbnZpbC1jb21wb25lbnQgewogIHBhZGRpbmc6IDVweDsKICBtYXJnaW46IDhweCAwIDA7CiAgYm9yZGVyLXJhZGl1czogMjBweDsKfQoKLmFwcC1iYXIgYSAubGluay10ZXh0IHsKICBwYWRkaW5nOiAwIDRweDsKfQouYXBwLWJhciBhLmhhcy10ZXh0IC5hbnZpbC1jb21wb25lbnQtaWNvbi5sZWZ0IHsKICBtYXJnaW4tcmlnaHQ6IDRweDsKfQouYXBwLWJhciBhLmhhcy10ZXh0IC5hbnZpbC1jb21wb25lbnQtaWNvbi5yaWdodCB7CiAgbWFyZ2luLWxlZnQ6IDRweDsKfQoKLmFwcC1iYXIgYTpob3ZlciwgLmFwcC1iYXIgYTphY3RpdmUgewogIGNvbG9yOiAjZWVlOyB0ZXh0LWRlY29yYXRpb246IG5vbmU7CiAgYmFja2dyb3VuZC1jb2xvcjogJWNvbG9yOlByaW1hcnkgNzAwJTsKfQoKCi8qIENvbXBvbmVudDogRGlhbG9nIChhbGVydCksIE5vdGlmaWNhdGlvbiAqLwoubW9kYWwtY29udGVudCwgYm9keT5kaXZbZGF0YS1ub3RpZnk9ImNvbnRhaW5lciJdIHsKICBib3JkZXItcmFkaXVzOiAycHg7CiAgLyogMjRkcCAqLyBib3gtc2hhZG93OiAwIDlweCA0NnB4IDhweCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDExcHggMTVweCAtN3B4IHJnYmEoMCwgMCwgMCwgMC4xMiksIDAgMjRweCAzOHB4IDNweCByZ2JhKDAsIDAsIDAsIDAuMikKICAgICFpbXBvcnRhbnQ7Cn0KCi5tb2RhbC1oZWFkZXIgewogIHBhZGRpbmc6IDI0cHggMjRweCAwcHg7CiAgZm9udC1zaXplOiAyNHB4OwogIGxpbmUtaGVpZ2h0OiAzMnB4OwogIGJvcmRlcjogMDsKfQoKLm1vZGFsLWJvZHkgewogIHBhZGRpbmc6IDIwcHggMjRweCAyNHB4OwogIGZvbnQtc2l6ZTogMTZweDsKICBjb2xvcjogIzc0NzQ3NDsKfQoKLm1vZGFsLWZvb3RlciB7CiAgcGFkZGluZzogOHB4IDhweCA4cHggMjRweDsKICBib3JkZXI6IDA7Cn0KCi5tb2RhbC1mb290ZXIgLmJ0biB7CiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7CiAgY29sb3I6ICVjb2xvcjpQcmltYXJ5IDUwMCU7Cn0KLm1vZGFsLWZvb3RlciAuYnRuLCAubW9kYWwtZm9vdGVyIC5idG46Zm9jdXMsIC5tb2RhbC1mb290ZXIgLmJ0bjphY3RpdmUgewogIGJveC1zaGFkb3c6IG5vbmU7CiAgdG9wOiAwOwp9CgovKiBOb3RpZmljYXRpb25zICovCmJvZHk+ZGl2W2RhdGEtbm90aWZ5PSJjb250YWluZXIiXSB7CiAgYmFja2dyb3VuZDogd2hpdGU7CiAgYm9yZGVyOiBub25lOwogIHBhZGRpbmc6IDI0cHg7Cn0KCmJvZHk+ZGl2W2RhdGEtbm90aWZ5PSJjb250YWluZXIiXT5zcGFuW2RhdGEtbm90aWZ5PSJ0aXRsZSJdIHsKICBkaXNwbGF5OiBibG9jazsKICBmb250LXNpemU6IDE4cHg7CiAgZm9udC13ZWlnaHQ6IDUwMDsKICBjb2xvcjogIzMzMzMzMzsKfQoKYm9keT5kaXZbZGF0YS1ub3RpZnk9ImNvbnRhaW5lciJdPnNwYW5bZGF0YS1ub3RpZnk9Im1lc3NhZ2UiXSB7CiAgZGlzcGxheTogYmxvY2s7CiAgcGFkZGluZzogMjBweCAwIDA7CiAgZm9udC1zaXplOiAxNnB4OwogIGNvbG9yOiAjNzQ3NDc0OyAgCn0KCmJvZHk+ZGl2W2RhdGEtbm90aWZ5PSJjb250YWluZXIiXS5hbGVydC1zdWNjZXNzewogIGJhY2tncm91bmQtY29sb3I6ICNkNGVkZGE7Cn0KCmJvZHk+ZGl2W2RhdGEtbm90aWZ5PSJjb250YWluZXIiXS5hbGVydC1zdWNjZXNzPnNwYW5bZGF0YS1ub3RpZnk9InRpdGxlIl17CiAgY29sb3I6ICMxNTU3MjQ7Cn0KCmJvZHk+ZGl2W2RhdGEtbm90aWZ5PSJjb250YWluZXIiXS5hbGVydC1kYW5nZXJ7CiAgYmFja2dyb3VuZC1jb2xvcjogI2Y4ZDdkYTsKfQoKYm9keT5kaXZbZGF0YS1ub3RpZnk9ImNvbnRhaW5lciJdLmFsZXJ0LWRhbmdlcj5zcGFuW2RhdGEtbm90aWZ5PSJ0aXRsZSJdewogIGNvbG9yOiAjNzIxYzI0Owp9Cgpib2R5PmRpdltkYXRhLW5vdGlmeT0iY29udGFpbmVyIl0uYWxlcnQtd2FybmluZ3sKICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmM2NkOwp9Cgpib2R5PmRpdltkYXRhLW5vdGlmeT0iY29udGFpbmVyIl0uYWxlcnQtd2FybmluZz5zcGFuW2RhdGEtbm90aWZ5PSJ0aXRsZSJdewogIGNvbG9yOiAjODU2NDA0Owp9CgoKLyogQ29tcG9uZW50OiBCdXR0b24gKi8KCi5idG4sIC5idG4tZGVmYXVsdCwgLmZpbGUtbG9hZGVyPmxhYmVsIHsKICBib3JkZXItcmFkaXVzOiAycHg7CiAgZm9udC1zaXplOiAxNHB4OwogIGZvbnQtd2VpZ2h0OiA1MDA7CiAgcGFkZGluZzogOHB4IDE2cHg7CiAgbWluLWhlaWdodDogY2FsYygxNnB4ICsgMS40Mjg1NzE0M2VtKTsKICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwoKICBib3JkZXI6IDA7CiAgYmFja2dyb3VuZC1pbWFnZTogbm9uZTsKICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDsKICBjb2xvcjogJWNvbG9yOlByaW1hcnkgNTAwJTsKICB0ZXh0LXNoYWRvdzogbm9uZTsKICBib3gtc2hhZG93OiBub25lOwogIC13ZWJraXQtYm94LXNoYWRvdzogbm9uZTsKICAKICBwb3NpdGlvbjogcmVsYXRpdmU7Cn0KCi5idG46aG92ZXIsIC5idG46Zm9jdXMsIC5maWxlLWxvYWRlcj5sYWJlbDpob3ZlciB7CiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgxNTMsMTUzLDE1MywwLjIpOwogIGJhY2tncm91bmQtaW1hZ2U6IG5vbmU7CiAgb3V0bGluZTogbm9uZTsKICBjb2xvcjogJWNvbG9yOlByaW1hcnkgNTAwJTsKfQoKLmJ0bjphY3RpdmUsIC5idG46YWN0aXZlOmZvY3VzIHsKICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDE1MywxNTMsMTUzLDAuNCk7CiAgYmFja2dyb3VuZC1pbWFnZTogbm9uZTsKICBvdXRsaW5lOiBub25lOwogIGJveC1zaGFkb3c6IG5vbmU7CiAgY29sb3I6ICVjb2xvcjpQcmltYXJ5IDUwMCU7Cn0KCi5idG5bZGlzYWJsZWRdIHsgY29sb3I6IHJnYmEoMCwgMCwgMCwgLjI1KTsgfQouYW52aWwtcm9sZS1yYWlzZWQgPiAuYnRuW2Rpc2FibGVkXSwgLmFudmlsLXJvbGUtcHJpbWFyeS1jb2xvciA+IC5idG5bZGlzYWJsZWRdLCAuYW52aWwtcm9sZS1zZWNvbmRhcnktY29sb3IgPiAuYnRuW2Rpc2FibGVkXSB7CiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLDAsMCwwLjEyKSAhaW1wb3J0YW50OwogIGNvbG9yOiByZ2JhKDAsMCwwLDAuMjUpICFpbXBvcnRhbnQ7CiAgYm94LXNoYWRvdzogbm9uZSAhaW1wb3J0YW50Owp9CgouYW52aWwtcm9sZS1yYWlzZWQgPiAuYnRuLCAuYW52aWwtcm9sZS1wcmltYXJ5LWNvbG9yID4gLmJ0biwgLmFudmlsLXJvbGUtc2Vjb25kYXJ5LWNvbG9yID4gLmJ0biwgLmFudmlsLXJvbGUtcmFpc2VkLmZpbGUtbG9hZGVyPmxhYmVsLCAuYW52aWwtcm9sZS1wcmltYXJ5LWNvbG9yLmZpbGUtbG9hZGVyPmxhYmVsLCAuYW52aWwtcm9sZS1zZWNvbmRhcnktY29sb3IuZmlsZS1sb2FkZXI+bGFiZWwsCi5idG4tcHJpbWFyeSwgLmJ0bi1zdWNjZXNzLCAuYnRuLWluZm8sIC5idG4td2FybmluZywgLmJ0bi1kYW5nZXIKewogIC8qIDJkcCAqLyAgYm94LXNoYWRvdzogMCAycHggMnB4IDAgcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAzcHggMXB4IC0ycHggcmdiYSgwLCAwLCAwLCAwLjIpLCAwIDFweCA1cHggMCByZ2JhKDAsIDAsIDAsIDAuMTIpOwp9CgouYW52aWwtcm9sZS1yYWlzZWQgPiAuYnRuOmFjdGl2ZSwgLmFudmlsLXJvbGUtcHJpbWFyeS1jb2xvciA+IC5idG46YWN0aXZlLCAuYW52aWwtcm9sZS1zZWNvbmRhcnktY29sb3IgPiAuYnRuOmFjdGl2ZSwgLmJ0bi1wcmltYXJ5OmFjdGl2ZSwKLmJ0bi1wcmltYXJ5OmFjdGl2ZSwgLmJ0bi1zdWNjZXNzOmFjdGl2ZSwgLmJ0bi1pbmZvOmFjdGl2ZSwgLmJ0bi13YXJuaW5nOmFjdGl2ZSwgLmJ0bi1kYW5nZXI6YWN0aXZlIHsKICAvKiA4ZHAgKi8gYm94LXNoYWRvdzogMCA4cHggMTBweCAxcHggcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAzcHggMTRweCAycHggcmdiYSgwLCAwLCAwLCAwLjEyKSwgMCA1cHggNXB4IC0zcHggcmdiYSgwLCAwLCAwLCAwLjIpOyAgCiAgdG9wOiAtMXB4Owp9CgouYW52aWwtcm9sZS1wcmltYXJ5LWNvbG9yID4gLmJ0biwgLmJ0bi1wcmltYXJ5LCAuYW52aWwtcm9sZS1wcmltYXJ5LWNvbG9yLmZpbGUtbG9hZGVyPmxhYmVsIHsKICBjb2xvcjogd2hpdGU7CiAgYmFja2dyb3VuZC1jb2xvcjogJWNvbG9yOlByaW1hcnkgNTAwJTsKfQoKLmFudmlsLXJvbGUtc2Vjb25kYXJ5LWNvbG9yID4gLmJ0biwgLmFudmlsLXJvbGUtc2Vjb25kYXJ5LWNvbG9yLmZpbGUtbG9hZGVyPmxhYmVsIHsKICBjb2xvcjogd2hpdGU7CiAgYmFja2dyb3VuZC1jb2xvcjogJWNvbG9yOlNlY29uZGFyeSA1MDAlOwp9CgouYnRuLXN1Y2Nlc3MsIC5idG4taW5mbywgLmJ0bi13YXJuaW5nLCAuYnRuLWRhbmdlciB7CiAgY29sb3I6IHdoaXRlOwp9CgouYW52aWwtcm9sZS1wcmltYXJ5LWNvbG9yID4gLmJ0bjpob3ZlciwgLmFudmlsLXJvbGUtcHJpbWFyeS1jb2xvciA+IC5idG46YWN0aXZlLCAuYW52aWwtcm9sZS1wcmltYXJ5LWNvbG9yID4gLmJ0bjpmb2N1cywKLmJ0bi1wcmltYXJ5OmhvdmVyLCAuYnRuLXByaW1hcnk6YWN0aXZlLCAuYnRuLXByaW1hcnk6Zm9jdXMgewogIGNvbG9yOiB3aGl0ZTsKICBiYWNrZ3JvdW5kLWNvbG9yOiAlY29sb3I6UHJpbWFyeSA3MDAlOwp9CgouYW52aWwtcm9sZS1zZWNvbmRhcnktY29sb3IgPiAuYnRuOmhvdmVyLCAuYW52aWwtcm9sZS1zZWNvbmRhcnktY29sb3IgPiAuYnRuOmFjdGl2ZSwgLmFudmlsLXJvbGUtc2Vjb25kYXJ5LWNvbG9yID4gLmJ0bjpmb2N1cyB7CiAgY29sb3I6IHdoaXRlOwogIGJhY2tncm91bmQtY29sb3I6ICVjb2xvcjpTZWNvbmRhcnkgNzAwJTsKfQoKLyogQ29tcG9uZW50OiBDYXJkICovCgouYW52aWwtcm9sZS1jYXJkIHsKICBvdmVyZmxvdzogaGlkZGVuOwogIGJvcmRlci1yYWRpdXM6IDJweDsKICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTsKICBwYWRkaW5nOiA4cHggMTJweDsKICAvKiAyZHAgKi8gIGJveC1zaGFkb3c6IDAgMnB4IDJweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgM3B4IDFweCAtMnB4IHJnYmEoMCwgMCwgMCwgMC4yKSwgMCAxcHggNXB4IDAgcmdiYSgwLCAwLCAwLCAwLjEyKTsKfQoKLyogZnVsbF93aWR0aF9yb3cgc2VjdGlvbnMgZ28gZnVsbCBibGVlZCAqLwouY29sdW1uLXBhbmVsLmFudmlsLXJvbGUtY2FyZCA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uID4gLmFudmlsLXBhbmVsLXNlY3Rpb24tY29udGFpbmVyLmZ1bGwtd2lkdGgtcm93IHsKICBtYXJnaW4tbGVmdDogLTEycHg7CiAgbWFyZ2luLXJpZ2h0OiAtMTJweDsKICB3aWR0aDogaW5pdGlhbDsKICBtYXgtd2lkdGg6IGluaXRpYWw7Cn0KCi8qIElmIHRoZSBmaXJzdCByb3cgb2YgYSBjYXJkIGlzIGEgZnVsbF93aWR0aF9yb3csIGl0IGdvZXMgdG8gdGhlIHRvcCAqLwouY29sdW1uLXBhbmVsLmFudmlsLXJvbGUtY2FyZCA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uOmZpcnN0LWNoaWxkID4gLmFudmlsLXBhbmVsLXNlY3Rpb24tY29udGFpbmVyLmZ1bGwtd2lkdGgtcm93IHsKICBtYXJnaW4tdG9wOiAtOHB4Owp9Ci5jb2x1bW4tcGFuZWwuYW52aWwtcm9sZS1jYXJkID4gLmFudmlsLXBhbmVsLXNlY3Rpb246bGFzdC1jaGlsZCA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWNvbnRhaW5lci5mdWxsLXdpZHRoLXJvdyB7CiAgbWFyZ2luLWJvdHRvbTogLThweDsKfQoKCgovKiBDb21wb25lbnQ6IFRleHRCb3ggKyBUZXh0QXJlYSAqLwoKaW5wdXQuYW52aWwtY29tcG9uZW50LCB0ZXh0YXJlYS5hbnZpbC1jb21wb25lbnQsIC5hbnZpbC1jb21wb25lbnQgc2VsZWN0LCAuYW52aWwtZGF0ZXBpY2tlciBpbnB1dCB7CiAgZm9udC1zaXplOiAxNnB4OwogIGxpbmUtaGVpZ2h0OiAxLjU7CiAgYm9yZGVyLXJhZGl1czogMDsKICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDsKICBjb2xvcjogcmdiYSgwLDAsMCwwLjg3KTsKICAKICBib3gtc2hhZG93OiBub25lOwp9CgouYW52aWwtZHJvcGRvd24gewogIGZvbnQtc2l6ZTogMTZweDsKfQouYW52aWwtY29tcG9uZW50IHNlbGVjdCB7CiAgZm9udC1zaXplOiBpbmhlcml0Owp9CgppbnB1dC5hbnZpbC1jb21wb25lbnQsIC5hbnZpbC1jb21wb25lbnQgc2VsZWN0LCAuYW52aWwtZGF0ZXBpY2tlciBpbnB1dCB7CiAgcGFkZGluZzogOHB4IDAgNHB4OwogIGJvcmRlcjogMDsKICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgwLDAsMCwwLjQyKTsKCiAgdHJhbnNpdGlvbjogYm9yZGVyLWJvdHRvbSAwLjJzLCBwYWRkaW5nLWJvdHRvbSAwLjJzOwogIC1tb3otdHJhbnNpdGlvbjogbm9uZTsgLyogRmlyZWZveCBpcyBqdW1weSwgc28gZGlzYWJsZSB0cmFuc2l0aW9ucyAqLwp9Cgp0ZXh0YXJlYS5hbnZpbC1jb21wb25lbnQgewogIHBhZGRpbmc6IDRweCA4cHg7CiAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgwLDAsMCwwLjQyKTsKICBib3JkZXItcmFkaXVzOiAycHg7CiAgdHJhbnNpdGlvbjogYm9yZGVyIDAuMnMsIHBhZGRpbmcgMC4yczsKICAtbW96LXRyYW5zaXRpb246IG5vbmU7IC8qIEZpcmVmb3ggaXMganVtcHksIHNvIGRpc2FibGUgdHJhbnNpdGlvbnMgKi8KfQoKLmFudmlsLWRyb3Bkb3duIHNlbGVjdC5mb3JtLWNvbnRyb2wgewogIAogIC13ZWJraXQtYXBwZWFyYW5jZTogbm9uZTsKICAtbW96LWFwcGVhcmFuY2U6IG5vbmU7CiAgcGFkZGluZzogOHB4IDJlbSA0cHggMDsKICAKICAvKiBldyBldyBldyAtIHNlbGVjdCBlbGVtZW50cyBhcmUgd2VpcmQgYW5kIGRvbid0IG9iZXkgbGluZS1oZWlnaHQsIHNvIHdlIGp1c3QKICAgICBzZXQgdGhlIGhlaWdodCBleHBsaWNpdGx5LiBVZ2guICovCiAgaGVpZ2h0OiBjYWxjKDEuNWVtICsgMTNweCk7IC8qIDhweCArIDRweCBwYWRkaW5nICsgMXB4IGJvcmRlciA9IDEzcHggKi8KfQoKLmFudmlsLWRyb3Bkb3duIHsKICBwb3NpdGlvbjogcmVsYXRpdmU7Cn0KLyogU2VsZWN0IGFycm93IHN0eWxpbmcgKi8KLmFudmlsLWRyb3Bkb3duIGZvcm06YmVmb3JlIHsKICAgIGNvbnRlbnQ6ICJcMjVCQyI7CiAgICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgICByaWdodDogMDsKICAgIGZvbnQtc2l6ZTogODAlOwogICAgbGluZS1oZWlnaHQ6IGNhbGMoMS44ZW0gKyA4cHgpOwogICAgY29sb3I6ICM1NTU7CiAgICBwb2ludGVyLWV2ZW50czpub25lOwogICAgcGFkZGluZzogNHB4IDRweDsKfQoKLmFudmlsLWNvbXBvbmVudCBzZWxlY3QsIC5hbnZpbC1kYXRlcGlja2VyIGlucHV0IHsgbWFyZ2luLWJvdHRvbTogNHB4OyB9CmlucHV0LmFudmlsLWNvbXBvbmVudC5hbnZpbC1zcGFjaW5nLWJlbG93LW5vbmUgeyBtYXJnaW4tYm90dG9tOiA0cHg7IH0KaW5wdXQuYW52aWwtY29tcG9uZW50LmFudmlsLXNwYWNpbmctYmVsb3ctc21hbGwgeyBtYXJnaW4tYm90dG9tOiA4cHg7IH0KaW5wdXQuYW52aWwtY29tcG9uZW50LmFudmlsLXNwYWNpbmctYmVsb3ctbWVkaXVtIHsgbWFyZ2luLWJvdHRvbTogMTJweDsgfQppbnB1dC5hbnZpbC1jb21wb25lbnQuYW52aWwtc3BhY2luZy1iZWxvdy1sYXJnZSB7IG1hcmdpbi1ib3R0b206IDIwcHg7IH0KCmlucHV0LmFudmlsLWNvbXBvbmVudDo6LXdlYmtpdC1pbnB1dC1wbGFjZWhvbGRlciwgdGV4dGFyZWEuYW52aWwtY29tcG9uZW50Ojotd2Via2l0LWlucHV0LXBsYWNlaG9sZGVyIHsKICBjb2xvcjogcmdiYSgwLDAsMCwwLjU0KTsKfQppbnB1dC5hbnZpbC1jb21wb25lbnQ6Oi1tb3otcGxhY2Vob2xkZXIsIHRleHRhcmVhLmFudmlsLWNvbXBvbmVudDo6LW1vei1wbGFjZWhvbGRlciB7CiAgY29sb3I6IHJnYmEoMCwwLDAsMC41NCk7Cn0KaW5wdXQuYW52aWwtY29tcG9uZW50OjpwbGFjZWhvbGRlciwgdGV4dGFyZWEuYW52aWwtY29tcG9uZW50OjpwbGFjZWhvbGRlciAgewogIGNvbG9yOiByZ2JhKDAsMCwwLDAuNTQpOwp9CgouYXBwLWJhciBpbnB1dC5hbnZpbC1jb21wb25lbnQ6Oi13ZWJraXQtaW5wdXQtcGxhY2Vob2xkZXIsIC5hcHAtYmFyIHRleHRhcmVhLmFudmlsLWNvbXBvbmVudDo6LXdlYmtpdC1pbnB1dC1wbGFjZWhvbGRlciB7CiAgY29sb3I6IHJnYmEoMjU1LDI1NSwyNTUsMC44KTsKfQouYXBwLWJhciBpbnB1dC5hbnZpbC1jb21wb25lbnQ6Oi1tb3otcGxhY2Vob2xkZXIsIC5hcHAtYmFyIHRleHRhcmVhLmFudmlsLWNvbXBvbmVudDo6LW1vei1wbGFjZWhvbGRlciB7CiAgY29sb3I6IHJnYmEoMjU1LDI1NSwyNTUsMC44KTsKfQouYXBwLWJhciBpbnB1dC5hbnZpbC1jb21wb25lbnQ6OnBsYWNlaG9sZGVyLCAuYXBwLWJhciB0ZXh0YXJlYS5hbnZpbC1jb21wb25lbnQ6OnBsYWNlaG9sZGVyICB7CiAgY29sb3I6IHJnYmEoMjU1LDI1NSwyNTUsMC44KTsKfQoKaW5wdXQuYW52aWwtY29tcG9uZW50OmhvdmVyLCAuYW52aWwtY29tcG9uZW50IHNlbGVjdDpob3ZlciwgLmFudmlsLWRhdGVwaWNrZXIgaW5wdXQ6aG92ZXIgewogIGJvcmRlci1ib3R0b206IDJweCBzb2xpZCByZ2JhKDAsMCwwLC44Nyk7CiAgcGFkZGluZy1ib3R0b206IDNweDsKfQoKaW5wdXQuYW52aWwtY29tcG9uZW50OmZvY3VzLCAuYW52aWwtY29tcG9uZW50IHNlbGVjdDpmb2N1cywgLmFudmlsLWRhdGVwaWNrZXIgaW5wdXQ6Zm9jdXMgewogIGJvcmRlci1ib3R0b206IDJweCBzb2xpZCAlY29sb3I6UHJpbWFyeSA3MDAlOwogIHBhZGRpbmctYm90dG9tOiAzcHg7CiAgYm94LXNoYWRvdzogbm9uZTsKfQoKaW5wdXQuYW52aWwtY29tcG9uZW50W2Rpc2FibGVkXSwgLmFudmlsLWNvbXBvbmVudCBzZWxlY3RbZGlzYWJsZWRdLCAuYW52aWwtZGF0ZXBpY2tlciBpbnB1dFtkaXNhYmxlZF0gewogIGJvcmRlci1ib3R0b206IDFweCBkYXNoZWQgIzg4ODsKICBwYWRkaW5nLWJvdHRvbTogNHB4OwogIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50Owp9Cgp0ZXh0YXJlYS5hbnZpbC1jb21wb25lbnQ6aG92ZXIgewogIGJvcmRlcjogMnB4IHNvbGlkIHJnYmEoMCwwLDAsMC44Nyk7CiAgcGFkZGluZzogM3B4IDdweDsKfQoKdGV4dGFyZWEuYW52aWwtY29tcG9uZW50OmZvY3VzIHsKICBib3JkZXI6IDJweCBzb2xpZCAlY29sb3I6UHJpbWFyeSA3MDAlOwogIHBhZGRpbmc6IDNweCA3cHg7CiAgYm94LXNoYWRvdzogbm9uZTsKfQoKdGV4dGFyZWEuYW52aWwtY29tcG9uZW50W2Rpc2FibGVkXSB7CiAgYm9yZGVyOiAxcHggZGFzaGVkICM4ODg7CiAgcGFkZGluZzogNHB4IDhweDsKICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDsKfQoKLmRhdGVyYW5nZXBpY2tlciB0ZC5hY3RpdmUgewogIGJhY2tncm91bmQtY29sb3I6ICVjb2xvcjpQcmltYXJ5IDUwMCU7Cn0KCi5kYXRlcmFuZ2VwaWNrZXIgdGQuYWN0aXZlOmhvdmVyIHsKICBiYWNrZ3JvdW5kLWNvbG9yOiAlY29sb3I6UHJpbWFyeSA3MDAlOwp9CgouZGF0ZXJhbmdlcGlja2VyIC5idG4tc3VjY2VzcyB7CiAgY29sb3I6ICVjb2xvcjpQcmltYXJ5IDUwMCU7Cn0KCi8qIENvbXBvbmVudDogQ2hlY2tCb3gsIFJhZGlvQnV0dG9uICovCi8qIFVnaC4gVGhlc2UgYXJlIGRlZmluaXRlbHkgVE9ETyByaWdodCBub3cuICovCgouY2hlY2tib3gsIC5yYWRpbyB7CiAgZm9udC1zaXplOiAxNnB4Owp9CgovKiBTaGFkb3cgdmFsdWVzIHRha2VuIGZyb20gCmh0dHBzOi8vc3RhY2tvdmVyZmxvdy5jb20vcXVlc3Rpb25zLzMwNTMzMDU1L2NhbGN1bGF0aW5nLXNoYWRvdy12YWx1ZXMtZm9yLWFsbC1tYXRlcmlhbC1kZXNpZ24tZWxldmF0aW9ucwoqLwoK,
+    id: 63AIEGWPX6TPM2CSXYTOQXXOPTIU4AON}
+server_modules:
+- {name: CourseDetails, code: "import anvil.google.auth, anvil.google.drive, anvil.google.mail\n\
+    from anvil.google.drive import app_files\nimport anvil.users\nimport anvil.tables\
+    \ as tables\nimport anvil.tables.query as q\nfrom anvil.tables import app_tables\n\
+    import anvil.server\n\n\n\n\n@anvil.server.callable\ndef get_course_details(course_name):\n\
+    \  return app_tables.courses.get(id_name=course_name)\n\n@anvil.server.callable\n\
+    def get_all_courses():\n  return app_tables.courses.client_readable()\n\n@anvil.server.callable\n\
+    def get_clothingstable_details(course_name):\n  return app_tables.clothingstable.get(id_name=course_name)\n\
+    \n\n@anvil.server.callable\ndef get_all_clothingstable():\n  return app_tables.clothingstable.client_readable()\n\
+    \n\n", id: NOJNFQHRO3A7FYM3B6FSHVJ2JQSNDBM3}
+- {name: clothingsdetails, code: "import anvil.google.auth, anvil.google.drive, anvil.google.mail\n\
+    from anvil.google.drive import app_files\nimport anvil.users\nimport anvil.tables\
+    \ as tables\nimport anvil.tables.query as q\nfrom anvil.tables import app_tables\n\
+    import anvil.server\n\n# This is a server module. It runs on the Anvil server,\n\
+    # rather than in the user's browser.\n#\n# To allow anvil.server.call() to call\
+    \ functions here, we mark\n# them with @anvil.server.callable.\n# Here is an example\
+    \ - you can replace it with your own:\n#\n# @anvil.server.callable\n# def say_hello(name):\n\
+    #   print(\"Hello, \" + name + \"!\")\n#   return 42\n@anvil.server.callable\n\
+    def get_clothingstable_details():\n  return app_tables.clothingstable.client_readable()\n\
+    \n\n@anvil.server.callable\ndef get_all_clothingstable():\n  return app_tables.clothingstable.client_readable()\n\
+    \n@anvil.server.callable\ndef get_householdtable_details():\n  return app_tables.householdtable.client_readable()\n\
+    \n@anvil.server.callable\ndef get_kitchentable_details():\n  return app_tables.kitchentable.client_readable()\n\
+    \n@anvil.server.callable\ndef get_accessoriestable_details():\n  return app_tables.accessoriestable.client_readable()\n\
+    \n@anvil.server.callable\ndef get_studytable_details():\n  return app_tables.studytable.client_readable()\n\
+    \n\n\n", id: NNATZ4N7Y2YPZXJXYXQJLCXNGASD6U65}
+renamed: true
